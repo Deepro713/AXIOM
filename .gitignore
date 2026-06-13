@@ -4,9 +4,13 @@
 # Vercel
 .vercel/
 
+# Env / secrets
+.env
+.env.*
+!.env.example
+
 # macOS
 .DS_Store
 
-# Node (in case tooling is added later)
+# Node
 node_modules/
-.vercel

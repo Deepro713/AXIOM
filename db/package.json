@@ -1,0 +1,15 @@
+{
+  "name": "axiom-db",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AXIOM Command implementation-tracking DB (NeonDB / Postgres)",
+  "scripts": {
+    "apply": "node apply.mjs",
+    "status": "node status.mjs",
+    "update": "node update.mjs"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  }
+}
