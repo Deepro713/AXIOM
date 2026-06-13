@@ -1,0 +1,2151 @@
+{
+  "plan": "- High-performance System-on-Chip (SoC) with integrated NPU (e.g., Rockchip RK3588S or similar ARM Cortex-A series) for AI and mobile computing.\n- Custom PCB incorporating SoC, LPDDR5 RAM, NVMe storage, Wi-Fi 6E, Bluetooth 5.3, NFC, Sub-GHz transceiver (CC1101/CC1125), and multi-frequency RFID module.\n- 4K AMOLED touchscreen display (approx. 5.5-6 inches) with MIPI DSI interface and advanced display driver IC.\n- High-density Li-Po battery (3000-5000 mAh), USB-C Power Delivery controller, and efficient power management IC.\n- Custom 3D-printed or CNC-machined enclosure (aluminum or high-strength polymer) with internal mounting points for components and antenna integration.\n- Tactile buttons, scroll wheel, and compact multi-axis joystick for user input, alongside accelerometer/gyroscope sensors.",
+  "nodes": [
+    {
+      "id": "main_soc",
+      "name": "Main System-on-Chip",
+      "pins": [
+        "LPDDR5",
+        "PCIe",
+        "USB3.0",
+        "MIPI_DSI",
+        "Ethernet",
+        "GPIO",
+        "I2C",
+        "SPI",
+        "UART"
+      ],
+      "type": "mcu",
+      "partId": "06ebac51-8dbd-4c6d-8a87-1c74cc6f9daa",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Rockchip+RK3588S&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/41uhQeiLf0L._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0GWHS9PVY?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$183.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005006833124333.html?pdp_npi=6%40dis%21USD%21164.72%21164.72%21%21%211114.47%211114.47%21%402140d33617796383390463123e1231%2112000038448517759%21affd%21%21%21%211%210%21",
+            "price": "$164.72",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0GWHS9PVY?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "23x23x2mm",
+      "description": "High-performance SoC for main operations, AI inference, display, and media processing.",
+      "productName": "Rockchip RK3588S",
+      "purchaseUrl": "https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&keywords=RK3588S",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/NdpwztbAIgDMmxGbP8fFks7yUFfsHjzlImSYmA68h7xlMRgzueFsRgokQ9f9hcpVKttxtQE2VzIoqkXJXrpOr6uR3zv7mP4CDO9CddoFf4t0QE5DXPy8Pgjhz4irfQSEjEGUmy5yF3A5gJ9h3NYjLMgqIMqa3zcpq5E2BC3W5EbV40Dm9buQxWpZzw1lbX8Zm2kZtNIa4KyDieNjsH7IU6Yv8StELKVvT9r4eFAaXPGhwHsgaDqdNcmY116r3GC2YvsOopeiiZPhJrV0cwgOQDSkW93v7gVKDqPkXyZF1oSWa6wSAOeznMFVlVYQwagRllb5RXClx7A9HmfLzo8h6Pbn9wD202KVq7EYkEum3diuVKBZL8ffhya1u8FoniqcPsvyMKtXMIuX98svpwcPlzM9eindjBgxGG7mMvSXiqsLFV4RTpUX5Sl2cXBLjnP5bHz446TBmwFzk9Hovc0n68Gy2RmIRjulJ9RvOMMPbPvQh5zIV78xlZJFfffYBd4eF4QabuvF12VHZ2d7zlZLdG8MzbIk33f2P2VDfYGbxcd2hX8nUr2gXpZObzPIT8ef3S1wqG9iLj4mgawGiJxUpNMqY4dqC51mYCBJwTPdhcSDVNO6LTe4FFU5N5e9ASNvGNVPEnQ31tEkQEJIXOA4InnMruoHPNpCavR3cdBbKDxsn6lgKlNlC8iKUgqkPpmruteyehRShM5eiQhGsyFPT7F3dc6E5ts1mifILyEpvGjooakQTCVHobleesaeo1MMFNnwm5zlqxsCYeIexNBqlGlYjBfYkf7AYArrhlPkgHhj8Jxehny5rCRnR2519OYmHApjkZnaCNtrFVFPU5cuBkJt16QpOm3eHSAbuAnrnzP8aX5CJbHJRbznfwkybjro1A71gcVtxBDFiklateqpyq3dAE1czi7Kw3d915iFh6e26EazHoVJmGP9dTNUr7TjyaTQwtiRkTEJNmfpBVVUi0kbMJKYDIQNw8yBoDeFHswMj",
+      "estimatedCost": 120
+    },
+    {
+      "id": "lpddr5_ram",
+      "name": "LPDDR5 RAM Module",
+      "pins": [
+        "SoC_LPDDR5_Interface"
+      ],
+      "type": "module",
+      "partId": "16526b20-de08-41ff-9a6c-12538ce90178",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Micron+LPDDR5+16GB&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/21CFouummOL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.aliexpress.com/w/wholesale-micron-lpddr5-16gb.html",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0CVXNRYKT?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$299.73",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "dimensions": "15x10x1mm",
+      "description": "High-speed LPDDR5 RAM for system memory, connected directly to SoC.",
+      "productName": "Micron LPDDR5 16GB",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=LPDDR5+16GB",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c45TRHwd",
+      "estimatedCost": 75,
+      "amazonUrl": "https://www.amazon.com/dp/B0CVXNRYKT?tag=blueprintam-20&linkCode=osi&th=1&psc=1"
+    },
+    {
+      "id": "nvme_storage_256gb",
+      "name": "NVMe Internal Storage 256GB",
+      "pins": [
+        "PCIe_M.2"
+      ],
+      "type": "module",
+      "partId": "ca258247-c18a-4cdc-b1e8-e556f4c5615b",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=WD+Black+SN770+256GB+M.2+2230&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/410gbyPJ1fL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0GWNHBCX2?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$169",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005011690991330.html?pdp_npi=6%40dis%21USD%21190.88%21190.88%21%21%211288.00%211288.00%21%40214114e317797136142486804e104c%2112000056257128413%21affd%21%21%21%211%210%21",
+            "price": "$190.88",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "dimensions": "30x22x2mm",
+      "productName": "WD Black SN770 256GB M.2 2230",
+      "purchaseUrl": "https://www.amazon.com/dp/B0GWNHBCX2?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/NdpwztbAIgDMmxGbP8fFks7yUFfsHjzlImSYmA68h7xlMRgzueFsRgokQ9f9hcpVKttxtQE2VzIoqkXJXrpOr6uR3zv7mP4CDO9CddoFf4t0QE5DXPy8Pgjhz4irfQSEjEGUmy5yF3A5gJ9h3NYjLMgqIMqa3zcpq5E2BC3W5EbV40Dm9buQxWpZzw1lbX8Zm2kZtNIa4KyDieNjsH7IU6Yv8StELKVvT9r4eFAaXPGhwHsgaDqdNcmY116r3GC2YvsOopeiiZPhJrV0cwgOQDSkW93v7gVKDqPkXyZF1oSWa6wSAOeznMFVlVZDFcRHXUULQ1Xgg55JGpqM9ujej6fC7CebCwAu7mfU2dkfFJaN50XaTVHjIAf4dpyK3QeUXIfk1RRXQfBXdDdoYBFICSd6T6DrXvegZzlM7Yy7uZqmuT0dVrZ7vFwd2EZw8JI1iVWOBNlkqslPDp9m9EkJcafdFLd6ItqZjfCIP0FAx1pND8qQAe57JsQkoZn3Azg4IzrVBAdKTqBz4zHD7JDUIZAs86V3nyzIyGs8n9TEyj6x2MoMYWE7DUHeAQs8E3zqQurtFfFxFghMaFP09FFRqdGgQx3SuT60E0AWOOrBrLG5CIfrkAykhZ1PLznU9v1PwDXAHB0OiBJuDtOrljRWY6zRfsJyybE5leUQxDcA21Aiwk8C3URcBLVEw2x5niASfmYBU5Z7mZcyOl6OQebDyjUmCZbnJdYgEZUIvle0VAyoTaqK8Uhia2g7MiuaJBvUBd8VDA8oaYXKSxayfNEpaPGs62gSJoYErESw3LdZXJxg8flF8C0kVm9N7Z1EzoIgf0W7W15i1FZM0C2YrhRJl8vFmDzgk3y49ZvChVTf9Q55ySvLIK2tRr0D7CE6TSXU6lBwill8qMtwxTUypyQmSRz6EfU4AuVp5dkWqAl7iS0rWIi5TcOviK87WrjWuxi8OI0gEKuH5gylmLHbJ3ujplmtbbKxdZY6STbsyqU0ekTe3",
+      "estimatedCost": 35,
+      "amazonUrl": "https://www.amazon.com/dp/B0GWNHBCX2?tag=blueprintam-20&linkCode=osi&th=1&psc=1"
+    },
+    {
+      "id": "wifi6e_bluetooth_module",
+      "name": "Wi-Fi 6E & Bluetooth 5.3 Module",
+      "pins": [
+        "PCIe",
+        "USB",
+        "Antenna_IPEX"
+      ],
+      "type": "module",
+      "partId": "2110d33f-b05c-47d6-95b0-5f0a4b00597d",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Intel+AX210+M.2+2230&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/41LFE5wvPHL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.aliexpress.com/item/1005007569703167.html?pdp_npi=6%40dis%21USD%2110.70%2110.59%21%21%2110.70%2110.59%21%40214114e317794648266794003e10a9%2112000041334177267%21affd%21%21%21%211%210%21",
+            "price": "$10.59",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B09WQSNMCT?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$22.93",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B09WQSNMCT?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "30x22x2mm",
+      "description": "M.2 E-key module providing high-performance Wi-Fi 6E (802.11ax) connectivity.",
+      "productName": "Intel AX210 M.2 2230",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxgyyD2YfNYQNjjBoiNwgJ81WtYYMaNZEavZyc1iOJLjvf7xaYOZwFoqmMgE1l1C70a9kRVTliGEpc0eFogz376WsrQOdlJBrnnwBFbM90w9rSHs8OQQdPjKpxqHZ6lmRzJv3tITJonx3B7OU2LIA4hyJ4v7pCgS951YtF5pTzksOeEM7bKrgNATV3FFnIjEOklr6mwjiiCxIYMxS35khOyTBy2ukhpLf3ZZujXEdgU7D6G61a5ufYoeRR7Fh4eEFK45CEbo3ijBHO3T5V1Am3EJHAOzyP7qwrplzC8v1TR1UxUTyVjX0CrzxfKz4NPGRkG7yRtmo40pbUYYay68pXVOWuZ9JnafdUn0OQaILWK8CFpv9ZnadebFdirKrnLzSRCWu92ofrt01g5B54gOT0johmzRk6tkMJUuYa8Wu73NSL7W0SARa1MubPtVyWtzhGAwYhsQ7ibD53mWSJHlhEj7RPmMPBZT3XdxD9DbfmrAsNqFJYVakaD13CrUelA7UlKJMYRVbHbeyKbj6kXp7ztlE4yU7hAenoZhqtUj7FbnNwjAUeOuKValGiNwDFfBhgxhqYsquwByNjPY47veaYG1yVufGqYroIsVE3wbxPY4kR1067u4rEYmSvtyEAS9rZYNRfxQWXVIvniVSRLwmroXv",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxgyyD2YfNYQNjjBoiNwgJ81WtYYMaNZEavZyc1iOJLjvf7xaYOZwFoqmMgE1l1C70a9kRVTliGEpc0eFogz376WsrQOdlJBrnnwBFbM90w9rSHs8OQQdPjKpxqHZ6lmRzJv3tITJonx3B7OU2LIA4hyJ4v7pCgS951YtF5pTzksOeEM7bKrgNATV3FFnIjEOklr6mwjiiCxIYMxS35khOyTBy2ukhpLf3ZZujXEdgU7D6G61a5ufYoeRR7Fh4eEFK45CEbo3ijBHO3T5V1Am3EJHAOzyP7qwrplzC8v1TR1UxUTyVjX0CrzxfKz4NPGRkG7yRtmo40pbUYYay68pXVOWuZ9JnafdUn0OQaILWK8CFpv9ZnadebFdirKrnLzSRCWu92ofrt01g5B54gOT0johmzRk6tkMJUuYa8Wu73NSL7W0SARa1MubPtVyWtzhGAwYhsQ7ibD53mWSJHlhEj7RPmMPBZT3XdxD9DbfmrAsNqFJYVakaD13CrUelA7UlKJMYRVbHbeyKbj6kXp7ztlE4yU7hAenoZhqtUj7FbnNwjAUeOuKValGiNwDFfBhgxhqYsquwByNjPY47veaYG1yVufGqYroIsVE3wbxPY4kR1067u4rEYmSvtyEAS9rZYNRfxQWXVIvniVSRLwmroXv",
+      "estimatedCost": 25
+    },
+    {
+      "id": "nfc_module",
+      "name": "NFC Module",
+      "pins": [
+        "I2C",
+        "GPIO",
+        "Antenna_Coil"
+      ],
+      "type": "module",
+      "partId": "afa29d77-22b9-40c4-84f3-b281dfb4af0c",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=PN7150+NFC+Controller&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://imgs.search.brave.com/VGSXtWI4skZBnF_jmawrMUCQEGmkVbbg1oqe-o9qoLg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/aWNtYW51ZmFjdHVy/ZXIuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDI1LzA5L0gw/OTI3YTQwZDExNmU0/MTZlODhiOGU4MzRi/ODU5NzBmZEQtNTAw/eDUwMC5wbmc",
+      "quantity": 1,
+      "dimensions": "20x15x2mm",
+      "productName": "PN7150 NFC Controller",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=PN7150",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c2vZmsCH",
+      "estimatedCost": 10,
+      "amazonUrl": "https://www.amazon.com/s?k=PN7150%20NFC%20Controller&tag=blueprintam-20"
+    },
+    {
+      "id": "sub_ghz_transceiver_cc1101",
+      "name": "Sub-GHz Transceiver (433/868/915 MHz)",
+      "pins": [
+        "SPI",
+        "GPIO",
+        "Antenna_SMA"
+      ],
+      "type": "module",
+      "partId": "dcdcd35f-8e01-4b59-8e89-68c0e1bf6ba5",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Texas+Instruments+CC1101&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/41JwO0QBeaL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B00JJ4I8G6?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$42.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/w/wholesale-texas-instruments-cc1101.html",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "dimensions": "16x12x2mm",
+      "description": "Transceiver for Sub-1 GHz wireless communication.",
+      "productName": "Texas Instruments CC1101",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=CC1101",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c3BLpxEt",
+      "estimatedCost": 7,
+      "amazonUrl": "https://www.amazon.com/dp/B00JJ4I8G6?tag=blueprintam-20&linkCode=osi&th=1&psc=1"
+    },
+    {
+      "id": "multi_rfid_module",
+      "name": "Multi-Frequency RFID Module",
+      "pins": [
+        "SPI",
+        "UART",
+        "GPIO",
+        "Antenna_Coil"
+      ],
+      "type": "module",
+      "partId": "93aa4840-d17b-4e44-b7c2-23938a093537",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=RC522+%2813.56MHz%29+%2B+EM4100+%28125kHz%29&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://imgs.search.brave.com/7jy1IXJIowmrLZd__pDyLXldDIkkyPYo8aSKwOQm_7g/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzFvZCtiZVVaTkwu/anBn",
+      "quantity": 1,
+      "dimensions": "30x20x3mm",
+      "productName": "RC522 (13.56MHz) + EM4100 (125kHz)",
+      "purchaseUrl": "https://www.amazon.com/s?k=RC522+EM4100+RFID+module",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c3cMGCXj",
+      "estimatedCost": 15,
+      "amazonUrl": "https://www.amazon.com/s?k=RC522%20(13.56MHz)%20%2B%20EM4100%20(125kHz)&tag=blueprintam-20"
+    },
+    {
+      "id": "display_4k_amoled",
+      "name": "4K AMOLED Touch Display",
+      "pins": [
+        "MIPI_DSI",
+        "I2C_Touch",
+        "VDD",
+        "GND"
+      ],
+      "type": "display",
+      "partId": "2f41bad5-c44c-4cb2-94ad-0ecca036b9ef",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=5.9-inch+4K+AMOLED+MIPI+DSI+Panel&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/4158WUBZOLL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B07ZPCLTVW?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$114.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/w/wholesale-2-5-inch-mipi-amoled-display-panel.html",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0CXTFN8K9?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$34.99",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B07ZPCLTVW?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "135x65x3mm",
+      "productName": "5.9-inch 4K AMOLED MIPI DSI Panel",
+      "purchaseUrl": "https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&keywords=5.9+inch+4K+AMOLED+MIPI+DSI",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c4FYvz4p",
+      "estimatedCost": 150
+    },
+    {
+      "id": "touchscreen_controller",
+      "name": "Touchscreen Controller IC",
+      "pins": [
+        "I2C",
+        "INT",
+        "RESET"
+      ],
+      "type": "module",
+      "partId": "e8b9cf37-dfd9-4378-a9ec-69c1f165d176",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Goodix+GT911&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://imgs.search.brave.com/b9eqYaz6gNMqhm4NnENKWcoI2C9Po3jDdXSYwfRyCbo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zLmFs/aWNkbi5jb20vQHNj/MDQva2YvSDk5MWRl/ODczYmI0MjRjYzk4/MDE4MjlkNjI4YTI0/MjEwZS5qcGdfMzAw/eDMwMC5qcGc",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.aliexpress.com/w/wholesale-goodix-gt911.html",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "dimensions": "5x5x1mm",
+      "description": "Controller for the capacitive touch panel, enabling interactive navigation and text selection.",
+      "productName": "Goodix GT911",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=GT911",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c4E5YazR",
+      "estimatedCost": 3,
+      "amazonUrl": "https://www.amazon.com/s?k=Goodix%20GT911&tag=blueprintam-20"
+    },
+    {
+      "id": "li_po_battery",
+      "name": "High-Density Li-Po Battery",
+      "pins": [
+        "BAT_POS",
+        "BAT_NEG"
+      ],
+      "type": "power",
+      "partId": "bcc190a9-6626-4c88-950c-4ffa309c1aa9",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=LiPo+3.7V+4500mAh&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/4103-CXUNGL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B07Y1Q2629?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$54.89",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005011557649682.html?pdp_npi=6%40dis%21USD%2193.31%2146.65%21%21%21632.64%21316.32%21%402151fd2c17793304654961006e0e49%2112000055916982137%21affd%21%21%21%211%210%21",
+            "price": "$46.65",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B07Y1Q2629?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "90x50x5mm",
+      "productName": "LiPo 3.7V 4500mAh",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxRvTgdYHM22mxL7XfUbfAqQe6cGuzBAFdZatuGXXrzVyPBGi2EXNApn92AyvtHwXBtDuNOqZ9Gwek2BbOmWW1AQFN4x7RrSMGEgtvXQzIAiWH6wObj7tscVdezCGmqquEa02gJPfH8hJaMq3jhCHu60i2uKeHHrcJQ17PORBOgBFAWMTOZjMse7uYnpPlDQbkK0oyatqBCoAxPq9u3EApNeGuJUei7GRVvFe3gH6f99Liru7TOTpqkyuIhf5LsWlRwsZX3Qw3ynvzQHqkipYCDJIPWiQXcopNjMJu6NrbHngqTwTTZhu1lqbtsdA4JwHGf1v3ObhQIlQxqZl1uaxtCj6OIkpv5yBt6XaC3zsKLjTm34PdJzOamBoDvhbsDjJbYKVmmj7oe8JMe1eqwoeVagabwV8lE5Na8YiPPNtgxmtmPnlzxxAqtLm05pmlqwN8BO4HZqyB7NoX2TAVaGowSVNoaBOTKyL62S9qCk0iz5p45X4REO9nSsJ36gKcjPuOcaL77DgKzz4rvmsU9Gf3Ex1AHI8lDAmuJ6fRli3fG9lJmCsDMJ7ABElQmvouVm8zJP2HQv5ddQ2VpZGpnfKJOjyWs0TuQVyIYZZJr98pPIMtpjB70shsgxbFgxS9khUhoOMatbKmxOpSqW52G9ZUMB1",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxRvTgdYHM22mxL7XfUbfAqQe6cGuzBAFdZatuGXXrzVyPBGi2EXNApn92AyvtHwXBtDuNOqZ9Gwek2BbOmWW1AQFN4x7RrSMGEgtvXQzIAiWH6wObj7tscVdezCGmqquEa02gJPfH8hJaMq3jhCHu60i2uKeHHrcJQ17PORBOgBFAWMTOZjMse7uYnpPlDQbkK0oyatqBCoAxPq9u3EApNeGuJUei7GRVvFe3gH6f99Liru7TOTpqkyuIhf5LsWlRwsZX3Qw3ynvzQHqkipYCDJIPWiQXcopNjMJu6NrbHngqTwTTZhu1lqbtsdA4JwHGf1v3ObhQIlQxqZl1uaxtCj6OIkpv5yBt6XaC3zsKLjTm34PdJzOamBoDvhbsDjJbYKVmmj7oe8JMe1eqwoeVagabwV8lE5Na8YiPPNtgxmtmPnlzxxAqtLm05pmlqwN8BO4HZqyB7NoX2TAVaGowSVNoaBOTKyL62S9qCk0iz5p45X4REO9nSsJ36gKcjPuOcaL77DgKzz4rvmsU9Gf3Ex1AHI8lDAmuJ6fRli3fG9lJmCsDMJ7ABElQmvouVm8zJP2HQv5ddQ2VpZGpnfKJOjyWs0TuQVyIYZZJr98pPIMtpjB70shsgxbFgxS9khUhoOMatbKmxOpSqW52G9ZUMB1",
+      "estimatedCost": 20
+    },
+    {
+      "id": "usb_c_pd_controller",
+      "name": "USB-C Power Delivery Controller",
+      "pins": [
+        "USB_C_CC",
+        "I2C",
+        "VBUS_IN",
+        "VBUS_OUT",
+        "GPIO"
+      ],
+      "type": "power",
+      "partId": "8cee59b6-5cc5-4b2c-8295-22b64f63abe9",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=STUSB4500&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://ae-pic-a1.aliexpress-media.com/kf/S91363ea86446482a8d9b17dd302641a6c.jpg",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "pins",
+            "value": "USB_CC1,USB_CC2,VBUS,GND,I2C"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.aliexpress.com/item/1005012271292472.html?pdp_npi=6%40dis%21USD%2112.34%2112.34%21%21%2183.42%2183.42%21%402151fd2c17793922982426974e0f0f%2112000057941082585%21affd%21%21%21%211%210%21",
+            "price": "$12.34",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "dimensions": "5x5x1mm",
+      "description": "USB-C Power Delivery controller for charging and external power supply.",
+      "productName": "STUSB4500",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=STUSB4500",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxH8dATzyA1QnYqyTsGsmMj4CUm3NBAOD5pF8pylPKdz2WAZkWwzvTZ5xNVJchBge7XCRi5ax4z9JNJmnqoUfLSijkXoMGWgovLWhp3GWtxJ7ounVhUkSyP6zL9WMwrH3mWgK3wMDYMTvbhh2CWkguBQ8aXt5z7Y3ewObL05lhyqdHk4gQFZx3RsAfFaR0GwZXxZcmrGT46djkEIOCPOKxngF7ygRnhyiYpVPRTodcQuJngaVlmYQW1zVlkLaxv1CQLtGGLW8yTBDtvCgeWXFoCdg29fSgHEipFuIAIV0YOn46trlJv82wwAQ3BIYGvSa5lJznYveaEBpKFGBP4Q1lWFidkWqY7OuklsORpeupDN1yeyW8ykwph6Cg6Mbc7HL6hkc58OJRHj5OVfI10AYO4smD3vW9mxzQVm2B7g9Z4hOefycy5iZWEXJobVVHBtWA6FkobOb70hD87aRU4Z7Z0Sse1FF20OAv8VYbithqGNERwr6Uk00T7XDRu79E0xD1oOMvbLa1OIsBzITTTe1DUOfWxUBUFhKpZOLzOEWyXLpt1KE8S6zBmwYriSySA23sQG21g8U661P5G0GgUwvlQ48TQvJr18goCIb6y1EvEL846LU22CWClNJ4DAKMSQx8y3VcLeqTru4SDeGufErmRP5",
+      "estimatedCost": 4,
+      "amazonUrl": "https://www.amazon.com/s?k=STUSB4500&tag=blueprintam-20"
+    },
+    {
+      "id": "power_management_ic",
+      "name": "Power Management IC (PMIC)",
+      "pins": [
+        "V_IN",
+        "BAT_IN",
+        "SYS_OUT",
+        "I2C",
+        "EN"
+      ],
+      "type": "power",
+      "partId": "fd08c983-0195-4b11-a7a1-eba8389b687c",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=TI+BQ25798&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://imgs.search.brave.com/mnXQpyDsmYvJF1IEZo5-AEFZGHaPaBvwqfZPO4A0feg/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly93d3cu/YWxsZGF0YXNoZWV0/Lm5ldC9odG1sZGF0/YXNoZWV0LzEyNzQ5/MTIvVEkvQlEyNTc5/OC8xMDQ1LzE3L0JR/MjU3OTguZ2lm.jpeg",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "pins",
+            "value": "VIN,VOUT,BAT,SYS,I2C_SDA,I2C_SCL,FAULT,INT,GND"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/w/wholesale-ti-bq25798.html",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "dimensions": "6x6x1mm",
+      "description": "Advanced power management IC for efficient charging and discharge of the LiPo battery.",
+      "productName": "TI BQ25798",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=BQ25798",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c3jvTrSN",
+      "estimatedCost": 12,
+      "amazonUrl": "https://www.amazon.com/s?k=TI%20BQ25798&tag=blueprintam-20"
+    },
+    {
+      "id": "accelerometer_gyroscope",
+      "name": "Accelerometer & Gyroscope",
+      "pins": [
+        "I2C",
+        "INT",
+        "VDD",
+        "GND"
+      ],
+      "type": "sensor",
+      "partId": "1047f88a-6df6-4071-a2b5-225cb8476847",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=MPU6050&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/41L-5JOpPkL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "pins",
+            "value": "SCL,SDA,VCC,GND,INT"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B00LP25V1A?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$11.79",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005010759394884.html?pdp_npi=6%40dis%21USD%218.69%214.34%21%21%2158.80%2129.40%21%4021013cc017795502319555257e0ef4%2112000053416133700%21affd%21%21%21%211%210%21",
+            "price": "$4.34",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B00LP25V1A?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "15x20x3mm",
+      "description": "6-axis accelerometer and gyroscope for measuring orientation and angular velocity, crucial for balancing.",
+      "productName": "MPU6050",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxwX2riMegVivyOdXeirJqoSBQyaavXhdq6mOTcHU0HDp9fGMr0CMDB4MLFbBmnWl5YPV6UTJ3j1w1UZnz9gCQRlOSPW4ynQkhc52CvlZf0V3tOtnJ11shcHcL3eLDBXNGmFXnt0w5pN53JgvWtbFdfVHqSzqcTWq0aBacNuhNq4EFxwu7DvAPgNk9dDEO3AlKhnkQwhAOgzFHig5zHjiFQLBSFlmh4tsQiHFOpLXQPfrP0YCaJmrkYc6yDIFdVfcoDCkXfzVpqf7aieAs6gVHwd12xeESjTifntq7uPKeG4SNwfdBUoqN6MqU25EsaW184FNkRTyN0vawSl1F3UQV08yz0OVNfcMbPHYyxBzf3bquifzkJjFiB1BWRIOqaX3eDPE8sv3hninrqFAp7pQ2on8i3qvPMGc1XKlyOF3s3C2F4Ehrx9taG3U34bIs0Gj7EyXdYtiDCbdydHYRyZZMNFElbHwZeLUiSTJqBMDFUUoA9Nc2t9RdNYhf764gVD3U00zIoAFR0medQkFFZf0S7WdnmZ6ofTT1aU3od9ra3GyOwDenKPKTZyMZzVZhrlLC9WcQhcfq5l4XIDvOLwpDakm1Qg3ebCJ3ex53oSZkcQtUnjHGuj1DdPOloAJ3I6RdCXmKW9sFwfMIz4Mus4uFWbt",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxwX2riMegVivyOdXeirJqoSBQyaavXhdq6mOTcHU0HDp9fGMr0CMDB4MLFbBmnWl5YPV6UTJ3j1w1UZnz9gCQRlOSPW4ynQkhc52CvlZf0V3tOtnJ11shcHcL3eLDBXNGmFXnt0w5pN53JgvWtbFdfVHqSzqcTWq0aBacNuhNq4EFxwu7DvAPgNk9dDEO3AlKhnkQwhAOgzFHig5zHjiFQLBSFlmh4tsQiHFOpLXQPfrP0YCaJmrkYc6yDIFdVfcoDCkXfzVpqf7aieAs6gVHwd12xeESjTifntq7uPKeG4SNwfdBUoqN6MqU25EsaW184FNkRTyN0vawSl1F3UQV08yz0OVNfcMbPHYyxBzf3bquifzkJjFiB1BWRIOqaX3eDPE8sv3hninrqFAp7pQ2on8i3qvPMGc1XKlyOF3s3C2F4Ehrx9taG3U34bIs0Gj7EyXdYtiDCbdydHYRyZZMNFElbHwZeLUiSTJqBMDFUUoA9Nc2t9RdNYhf764gVD3U00zIoAFR0medQkFFZf0S7WdnmZ6ofTT1aU3od9ra3GyOwDenKPKTZyMZzVZhrlLC9WcQhcfq5l4XIDvOLwpDakm1Qg3ebCJ3ex53oSZkcQtUnjHGuj1DdPOloAJ3I6RdCXmKW9sFwfMIz4Mus4uFWbt",
+      "estimatedCost": 3
+    },
+    {
+      "id": "tactile_button_power",
+      "name": "Power Button",
+      "pins": [
+        "GPIO"
+      ],
+      "type": "sensor",
+      "partId": "12cc82be-f710-45b9-adaf-68eb7bb68403",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Tactile+Push+Button+6x6mm&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://ae-pic-a1.aliexpress-media.com/kf/S5a615d98e63d4a949284eead581120adC.jpg",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "pins",
+            "value": "PIN1,PIN2"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.aliexpress.com/item/1005004971266223.html?pdp_npi=6%40dis%21USD%212.61%212.56%21%21%212.61%212.56%21%40212a7b8d17793253851078473e10df%2112000031200483149%21affd%21%21%21%211%210%21",
+            "price": "$2.56",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B07VSNN9S2?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$5.99",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B07VSNN9S2?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "6x6x5mm",
+      "description": "Tactile button for 'Up' input.",
+      "productName": "Tactile Push Button 6x6mm",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=tactile+push+button+6x6",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0Jxx3O45qvMjVvtzm3P6H9RNa162ua3zwGHj5sQ321w6Twfcr7LxdiK0of4fhtakRYYd45liYsfL51YqgvkFI9t6vR6aBiCXeFqyPIuuxiGr0FBXGTv48Zw8UVVG56q6KQexypMuHjoHAIQ7EdJtT6Ajo6HT3ABXEJWgzHKgMDbg0pRSOfOf8HAp5baOeKvwHuVlsJSYBhsticBKsIm2lzaOGEgHLjaENEqlD283DSQMTtFAoPgbticZi9cBfydWjb9aKM7cK3oVLEikb8LLsQWBK4UnhvfnfOod6S3G3EkS0oE74GUyGCXpA9Phml6yopUAFBaV6TAJVK4tvsiXNbrvO587hm3B6TKKNHVMhVVQCrq6eQd9eJMjEtTNsVS97PBVESDtAT9YbPr1kvdEJHECCKHXffuiQIDTXcBFMuwmp9CSU9V1WKVArDl4MzataVhNKEGHAkbLwKPrfO6P5mAkYahuRV63H5AbyyWhH5r3bmbej5JCqVgF8Jm7QitezLZEgoBSMalNjWXNNzcK8ezXESqwMjSB5g5fawl901jNPyFpLFHIODREE2ZlZ0grIby4L4vhMDkeCts0sExO8UWerDznZr1vQHyXV7pn8GJgai2stzp4neqGMVWYeHm45pEPZVyu8mGlEHAdCaWinHTEhH",
+      "estimatedCost": 0.5
+    },
+    {
+      "id": "tactile_button_fn1",
+      "name": "Function Button 1",
+      "pins": [
+        "GPIO"
+      ],
+      "type": "sensor",
+      "partId": "12cc82be-f710-45b9-adaf-68eb7bb68403",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Tactile+Push+Button+6x6mm&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://ae-pic-a1.aliexpress-media.com/kf/S5a615d98e63d4a949284eead581120adC.jpg",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "pins",
+            "value": "PIN1,PIN2"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.aliexpress.com/item/1005004971266223.html?pdp_npi=6%40dis%21USD%212.61%212.56%21%21%212.61%212.56%21%40212a7b8d17793253851078473e10df%2112000031200483149%21affd%21%21%21%211%210%21",
+            "price": "$2.56",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B07VSNN9S2?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$5.99",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B07VSNN9S2?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "6x6x5mm",
+      "description": "Tactile button for 'Up' input.",
+      "productName": "Tactile Push Button 6x6mm",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=tactile+push+button+6x6",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0Jxx3O45qvMjVvtzm3P6H9RNa162ua3zwGHj5sQ321w6Twfcr7LxdiK0of4fhtakRYYd45liYsfL51YqgvkFI9t6vR6aBiCXeFqyPIuuxiGr0FBXGTv48Zw8UVVG56q6KQexypMuHjoHAIQ7EdJtT6Ajo6HT3ABXEJWgzHKgMDbg0pRSOfOf8HAp5baOeKvwHuVlsJSYBhsticBKsIm2lzaOGEgHLjaENEqlD283DSQMTtFAoPgbticZi9cBfydWjb9aKM7cK3oVLEikb8LLsQWBK4UnhvfnfOod6S3G3EkS0oE74GUyGCXpA9Phml6yopUAFBaV6TAJVK4tvsiXNbrvO587hm3B6TKKNHVMhVVQCrq6eQd9eJMjEtTNsVS97PBVESDtAT9YbPr1kvdEJHECCKHXffuiQIDTXcBFMuwmp9CSU9V1WKVArDl4MzataVhNKEGHAkbLwKPrfO6P5mAkYahuRV63H5AbyyWhH5r3bmbej5JCqVgF8Jm7QitezLZEgoBSMalNjWXNNzcK8ezXESqwMjSB5g5fawl901jNPyFpLFHIODREE2ZlZ0grIby4L4vhMDkeCts0sExO8UWerDznZr1vQHyXV7pn8GJgai2stzp4neqGMVWYeHm45pEPZVyu8mGlEHAdCaWinHTEhH",
+      "estimatedCost": 0.5
+    },
+    {
+      "id": "tactile_button_fn2",
+      "name": "Function Button 2",
+      "pins": [
+        "GPIO"
+      ],
+      "type": "sensor",
+      "partId": "12cc82be-f710-45b9-adaf-68eb7bb68403",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Tactile+Push+Button+6x6mm&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://ae-pic-a1.aliexpress-media.com/kf/S5a615d98e63d4a949284eead581120adC.jpg",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "pins",
+            "value": "PIN1,PIN2"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.aliexpress.com/item/1005004971266223.html?pdp_npi=6%40dis%21USD%212.61%212.56%21%21%212.61%212.56%21%40212a7b8d17793253851078473e10df%2112000031200483149%21affd%21%21%21%211%210%21",
+            "price": "$2.56",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B07VSNN9S2?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$5.99",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B07VSNN9S2?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "6x6x5mm",
+      "description": "Tactile button for 'Up' input.",
+      "productName": "Tactile Push Button 6x6mm",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=tactile+push+button+6x6",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0Jxx3O45qvMjVvtzm3P6H9RNa162ua3zwGHj5sQ321w6Twfcr7LxdiK0of4fhtakRYYd45liYsfL51YqgvkFI9t6vR6aBiCXeFqyPIuuxiGr0FBXGTv48Zw8UVVG56q6KQexypMuHjoHAIQ7EdJtT6Ajo6HT3ABXEJWgzHKgMDbg0pRSOfOf8HAp5baOeKvwHuVlsJSYBhsticBKsIm2lzaOGEgHLjaENEqlD283DSQMTtFAoPgbticZi9cBfydWjb9aKM7cK3oVLEikb8LLsQWBK4UnhvfnfOod6S3G3EkS0oE74GUyGCXpA9Phml6yopUAFBaV6TAJVK4tvsiXNbrvO587hm3B6TKKNHVMhVVQCrq6eQd9eJMjEtTNsVS97PBVESDtAT9YbPr1kvdEJHECCKHXffuiQIDTXcBFMuwmp9CSU9V1WKVArDl4MzataVhNKEGHAkbLwKPrfO6P5mAkYahuRV63H5AbyyWhH5r3bmbej5JCqVgF8Jm7QitezLZEgoBSMalNjWXNNzcK8ezXESqwMjSB5g5fawl901jNPyFpLFHIODREE2ZlZ0grIby4L4vhMDkeCts0sExO8UWerDznZr1vQHyXV7pn8GJgai2stzp4neqGMVWYeHm45pEPZVyu8mGlEHAdCaWinHTEhH",
+      "estimatedCost": 0.5
+    },
+    {
+      "id": "scroll_wheel_encoder",
+      "name": "Scroll Wheel Rotary Encoder",
+      "pins": [
+        "CLK",
+        "DT",
+        "SW",
+        "GND",
+        "VCC"
+      ],
+      "type": "sensor",
+      "partId": "b9969ac3-2909-41b4-a051-e4a1b045b5b4",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Alps+EC11+Rotary+Encoder&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/51nTKvpc5sL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0C6Q67V97?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$8.88",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005004574931701.html?pdp_npi=6%40dis%21USD%214.00%213.68%21%21%214.00%213.68%21%402151fd3a17803917611601803e11ab%2112000029682073716%21affd%21%21%21%211%210%21",
+            "price": "$3.68",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "dimensions": "13x12x7mm",
+      "description": "Rotary encoder for scroll wheel movement, without detents for smooth scrolling.",
+      "productName": "Alps EC11 Rotary Encoder",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=Alps+EC11",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxImXUUTFbRxT4vptqL56FCU8J3nKSYf3fgesN69RkvEry8ERRTF7pQaBoK7QC6bjJbyoxtaMXwPAze6RcIGEpFXcRs4NUHVzYQlktzqNfaRUpDNjg5IQiuvxKBS5JAc5AXi6jlPyuxpzQnbB3hOcXmytJ0m9yxMFsxfE0nP0BVwwCiZKAJkDApimAkdHgFq3w1WThWRh8ZLhMKrMkb8Jd8Xr1qwYhhtRxGfLtcAw46kTVRf0GQRWWnVQLfXRDywErRq2b1VqkdGpKr8emwlixUyCgMWmYoxfOsS7QU6L8gzhRmrXZQwBVGK9pE9h8cRfhmU2k5RGGYxa0hhFyJOKpMba0U5S8Fidb7T1TU2UEcXlUNjtboxoGkdkpVucV9ZiRVZQmMKUD4BNzpniN7Z3dlNjYGSm6v1la7ij481UVy8xufsfV4lRB6zcZnxL4BlFi0jKHHDVpkdmniPKChct2pD7E6JuVpauBpviK5sBBQLIFB5HhQcY7DmWhXBaEeGzlO3YCj7IP3q8E53UJwnCvSz24LdGEHcrEhcFVJeb601YFJaVwpFw05suYBGXoiLYlvVCdsLEvndt2D7bU4Vj1Dw3xxwR2mHCNCRgY3ATSbUKlHnTfSHpEabDxk5MYSlU7UlDXT27Z8L2CHsDRdNS2VGJ",
+      "estimatedCost": 2.5,
+      "amazonUrl": "https://www.amazon.com/dp/B0C6Q67V97?tag=blueprintam-20&linkCode=osi&th=1&psc=1"
+    },
+    {
+      "id": "compact_joystick",
+      "name": "Compact Multi-Axis Joystick",
+      "pins": [
+        "VRx",
+        "VRy",
+        "SW",
+        "VCC",
+        "GND"
+      ],
+      "type": "sensor",
+      "partId": "b036a841-3e7c-4431-a119-f2de9841886f",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Analog+Joystick+Module+KY-023&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://ae-pic-a1.aliexpress-media.com/kf/Sc244d7820f2140d5a43b694a705b9e80O.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0CPFDKWZF?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$9.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005007967293155.html?pdp_npi=6%40dis%21USD%211.54%211.11%21%21%2110.40%217.49%21%402101611117793850229963178e0ea0%2112000043064778206%21affd%21%21%21%211%210%21",
+            "price": "$1.11",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0CPFDKWZF?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "34x26x32mm",
+      "description": "Provides flight control input (e.g., thrust vectoring or rotation) for main MCU.",
+      "productName": "Analog Joystick Module KY-023",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxRLoJEDffS6r1dHjCbox5rMmpZco1XjLCW3jcjibdnieBImJ9440FEVGaVB3BjUVrKjZnnSDTdcz3v5YypqxN5YuqXTGBS7K5bcpa4T1MPFlyY4rIBdaNsW9ub1mYpqMuofQD5kG9ZU1N2bSl3Gxegszhr7jP0RdBQra59YSp8zOI4gZwv2g8Ciwk76UmA2djI3hEDSd0vzfEG4m6K7EMTLKv4SP8NGpVLM54h5syGL2D3J18Au6vkYUfzypxkxIU4jMZSgCDHmVCp6YF9vPVOWmWefQjTgpq0seNBQCqCFe25kW3wogW4Yvunw1qnJAcQZ31cS3LC9BJ9k2biSPTsWgnVZUib8WfQjTrKyw24bBiKYNSUuPTO7WuDL6vZjIZWwZozCV0SydhXvFWiLKo81ENIpMJKSz0pF2vSct1RoMitfkGKnBwTXgqVP8nup8PFA2QFUMbmnU2va4OysyflGMuT8Gr2pZoRcEysw8ucU0KzarXRtoLB31gLahQTQM4E8VcNhjTXjgZU03pyyWs2OgPWiZkBvVVCWRTwZr398qwiQ5zJo7Y9u4Qj69XEERfRI8wCSvVlzekkUIFGMVGXJLmmKiasGddzzVhiU9OGE1AVMr2NNKhuwuK7Qs69nLwNklNAuJaWNkuUY4kCLJGUoj",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxRLoJEDffS6r1dHjCbox5rMmpZco1XjLCW3jcjibdnieBImJ9440FEVGaVB3BjUVrKjZnnSDTdcz3v5YypqxN5YuqXTGBS7K5bcpa4T1MPFlyY4rIBdaNsW9ub1mYpqMuofQD5kG9ZU1N2bSl3Gxegszhr7jP0RdBQra59YSp8zOI4gZwv2g8Ciwk76UmA2djI3hEDSd0vzfEG4m6K7EMTLKv4SP8NGpVLM54h5syGL2D3J18Au6vkYUfzypxkxIU4jMZSgCDHmVCp6YF9vPVOWmWefQjTgpq0seNBQCqCFe25kW3wogW4Yvunw1qnJAcQZ31cS3LC9BJ9k2biSPTsWgnVZUib8WfQjTrKyw24bBiKYNSUuPTO7WuDL6vZjIZWwZozCV0SydhXvFWiLKo81ENIpMJKSz0pF2vSct1RoMitfkGKnBwTXgqVP8nup8PFA2QFUMbmnU2va4OysyflGMuT8Gr2pZoRcEysw8ucU0KzarXRtoLB31gLahQTQM4E8VcNhjTXjgZU03pyyWs2OgPWiZkBvVVCWRTwZr398qwiQ5zJo7Y9u4Qj69XEERfRI8wCSvVlzekkUIFGMVGXJLmmKiasGddzzVhiU9OGE1AVMr2NNKhuwuK7Qs69nLwNklNAuJaWNkuUY4kCLJGUoj",
+      "estimatedCost": 4
+    },
+    {
+      "id": "enclosure_front_housing",
+      "name": "Front Enclosure Housing",
+      "type": "enclosure",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Front+Enclosure+Housing&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "material": "ABS",
+      "quantity": 1,
+      "dimensions": "150x76x15mm",
+      "description": "Custom 3D-printed front shell, designed to hold the 4K AMOLED display and provide cutouts for user input components.",
+      "purchaseUrl": "https://www.amazon.com/s?k=ABS+filament",
+      "estimatedCost": 5,
+      "printSettings": "25% infill, 0.2mm layer height"
+    },
+    {
+      "id": "enclosure_rear_housing",
+      "name": "Rear Enclosure Housing",
+      "type": "enclosure",
+      "partId": "b55cc69a-4db4-4b15-8e24-8de2481ed8d7",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Rear+Casing&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "imageUrl": "https://m.media-amazon.com/images/I/415XEVO3LHL._SL500_.jpg",
+      "material": "ABS",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0GLXJGPRL?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$699.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005007053945894.html?pdp_npi=6%40dis%21USD%2125.90%2112.95%21%21%21174.87%2187.44%21%400b8ded7b17797763343911378e10c4%2112000039244847613%21affd%21%21%21%211%210%21",
+            "price": "$12.95",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B07C2NNLSR?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$79.99",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0GLXJGPRL?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "150x76x15mm",
+      "description": "Custom 3D-printed rear shell, designed to house the main PCB, battery, and provide ventilation/antenna pass-throughs.",
+      "productName": "Rear Casing",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxQviQCN0moYrt3bnTXA1AQ01jLZd4ceeOEeGPXgJbVKRXBXFElxwBtGCZpqSMKHeeHp77Qtrgi6j1vihGr9PemvkxC5JT1ZtnooUcPHi0hliFFO2gHlRh3VvC2MrII2NAYbNABWQmIlkFmpDrnsbYX6ucft3kIIfeljbU7Dpyc1D7E39I6ZrVh4mCShtzc5ZdmasCglofJc2jcc1u1ZQrjsCHrRYl3f95Ge4cciVb78BVXoj1hV774Zopt7pSUU3fDR5Jmt4nkRM5cIm9MNYAITdqwL0sXi7gxLGx67pF4DLXE7CBcUClLJIXnqdcBFYV5KQaIh32PZJlVVPuDk1lX08OyuuV8hJdDHDKcj0XF8v96RxsbjDmzj80LQ3Erf1PRtLcUsPbqcj6QbYop1n5lhVb9zCSUHAy9XserYjz14oFVdy3kFOkaUh2PIzbQl756dYcPVkOxHd892OvNGEgNc3o8kiHeUsdw6Z7GAP0Acu0toRJZPVtWkfJhSMnbJgQDlxRhRoysjFwD0xKO9EX2MeFTvWNRokMUAEugLAUFree4I23PFN9McWHPDwWuQiwb79wRj8uZ652lTEUB2Ownwf4BkYb7IfqDHWb1jscPfYFaBf7XQp2ZPrJY5ZpiKRUgSYJliuNwIyiZ8nolQ1Zq7D",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxQviQCN0moYrt3bnTXA1AQ01jLZd4ceeOEeGPXgJbVKRXBXFElxwBtGCZpqSMKHeeHp77Qtrgi6j1vihGr9PemvkxC5JT1ZtnooUcPHi0hliFFO2gHlRh3VvC2MrII2NAYbNABWQmIlkFmpDrnsbYX6ucft3kIIfeljbU7Dpyc1D7E39I6ZrVh4mCShtzc5ZdmasCglofJc2jcc1u1ZQrjsCHrRYl3f95Ge4cciVb78BVXoj1hV774Zopt7pSUU3fDR5Jmt4nkRM5cIm9MNYAITdqwL0sXi7gxLGx67pF4DLXE7CBcUClLJIXnqdcBFYV5KQaIh32PZJlVVPuDk1lX08OyuuV8hJdDHDKcj0XF8v96RxsbjDmzj80LQ3Erf1PRtLcUsPbqcj6QbYop1n5lhVb9zCSUHAy9XserYjz14oFVdy3kFOkaUh2PIzbQl756dYcPVkOxHd892OvNGEgNc3o8kiHeUsdw6Z7GAP0Acu0toRJZPVtWkfJhSMnbJgQDlxRhRoysjFwD0xKO9EX2MeFTvWNRokMUAEugLAUFree4I23PFN9McWHPDwWuQiwb79wRj8uZ652lTEUB2Ownwf4BkYb7IfqDHWb1jscPfYFaBf7XQp2ZPrJY5ZpiKRUgSYJliuNwIyiZ8nolQ1Zq7D",
+      "estimatedCost": 5,
+      "printSettings": "25% infill, 0.2mm layer height"
+    },
+    {
+      "id": "display_bezel",
+      "name": "Display Bezel",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "ABS",
+      "quantity": 1,
+      "mountsFor": "display_4k_amoled",
+      "dimensions": "135x68x2mm",
+      "description": "Thin custom 3D-printed bezel to secure and frame the 4K AMOLED display within the front housing.",
+      "purchaseUrl": "https://www.amazon.com/s?k=ABS+filament",
+      "estimatedCost": 0.5,
+      "printSettings": "100% infill, 0.1mm layer height"
+    },
+    {
+      "id": "main_pcb_mount",
+      "name": "Main PCB Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "main_soc",
+      "dimensions": "100x60x5mm",
+      "description": "Custom 3D-printed internal bracket to securely mount the main PCB within the rear enclosure.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PETG+filament",
+      "estimatedCost": 1.5,
+      "printSettings": "30% infill, 0.2mm layer height"
+    },
+    {
+      "id": "battery_holder",
+      "name": "Battery Holder",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "li_po_battery",
+      "dimensions": "80x45x10mm",
+      "description": "Custom 3D-printed holder to cradle and secure the Li-Po battery inside the enclosure, preventing movement.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PETG+filament",
+      "estimatedCost": 0.75,
+      "printSettings": "20% infill, 0.2mm layer height"
+    },
+    {
+      "id": "button_power_mount",
+      "name": "Power Button Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "ABS",
+      "quantity": 1,
+      "mountsFor": "tactile_button_power",
+      "dimensions": "10x10x5mm",
+      "description": "Small 3D-printed part to hold and align the tactile power button within the enclosure opening.",
+      "purchaseUrl": "https://www.amazon.com/s?k=ABS+filament",
+      "estimatedCost": 0.1,
+      "printSettings": "50% infill, 0.15mm layer height"
+    },
+    {
+      "id": "button_fn1_mount",
+      "name": "Function Button 1 Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "ABS",
+      "quantity": 1,
+      "mountsFor": "tactile_button_fn1",
+      "dimensions": "10x10x5mm",
+      "description": "Small 3D-printed part to hold and align the tactile function button 1 within the enclosure opening.",
+      "purchaseUrl": "https://www.amazon.com/s?k=ABS+filament",
+      "estimatedCost": 0.1,
+      "printSettings": "50% infill, 0.15mm layer height"
+    },
+    {
+      "id": "button_fn2_mount",
+      "name": "Function Button 2 Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "ABS",
+      "quantity": 1,
+      "mountsFor": "tactile_button_fn2",
+      "dimensions": "10x10x5mm",
+      "description": "Small 3D-printed part to hold and align the tactile function button 2 within the enclosure opening.",
+      "purchaseUrl": "https://www.amazon.com/s?k=ABS+filament",
+      "estimatedCost": 0.1,
+      "printSettings": "50% infill, 0.15mm layer height"
+    },
+    {
+      "id": "scroll_wheel_mount",
+      "name": "Scroll Wheel Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "scroll_wheel_encoder",
+      "dimensions": "20x15x10mm",
+      "description": "Custom 3D-printed bracket to securely mount the scroll wheel encoder to the front housing.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PETG+filament",
+      "estimatedCost": 0.25,
+      "printSettings": "40% infill, 0.2mm layer height"
+    },
+    {
+      "id": "joystick_mount",
+      "name": "Joystick Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "ABS",
+      "quantity": 1,
+      "mountsFor": "compact_joystick",
+      "dimensions": "25x25x10mm",
+      "description": "Custom 3D-printed support for the compact multi-axis joystick, ensuring precise movement and secure attachment.",
+      "purchaseUrl": "https://www.amazon.com/s?k=ABS+filament",
+      "estimatedCost": 0.3,
+      "printSettings": "50% infill, 0.2mm layer height"
+    },
+    {
+      "id": "m2_x_6mm_screws",
+      "name": "M2x6mm Mounting Screws",
+      "type": "misc",
+      "partId": "911936c7-76d6-42d8-b1e2-a5e2066f443f",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=M2x6mm+Phillips+Head+Screws&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "imageUrl": "https://m.media-amazon.com/images/I/31B6pWGBHSL._SL500_.jpg",
+      "quantity": 20,
+      "research": {
+        "specs": [
+          {
+            "label": "head_type",
+            "value": "Various"
+          },
+          {
+            "label": "length_mm",
+            "value": "6"
+          },
+          {
+            "label": "drive_type",
+            "value": "Phillips"
+          },
+          {
+            "label": "thread_size",
+            "value": "M2"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.extreme-bolt.com/store/peek-pan-head-screws-phillips-metric/m2-2/peek-pan-head-screw-m2-0-4-x-6mm-phillips",
+            "vendor": "Extreme Bolt & Fastener"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B082XXW76M?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$6.29",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/4000052516864.html?pdp_npi=6%40dis%21USD%212.24%211.79%21%21%212.24%211.79%21%402141149b17793341034994833e11dc%2110000000117073221%21affd%21%21%21%211%210%21",
+            "price": "$1.79",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B082XXW76M?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "M2x6mm",
+      "description": "Small machine screws for securing internal components like PCBs and modules to 3D-printed mounts.",
+      "productName": "M2x6mm Phillips Head Screws",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3xpjK0z5F4tXx7la8qLVQd4zJbXyg9djn5hqcn5eiz59QLSqGniXp8mL2a5X6S8FmRKmesnsvuIta9oFWYUBvK3XARQ5ovQ4sVFNCvQWPvG5oJlpGOYaOnw9xNSkO9LqmIQMLuK8d7XscVpa2my7ZqyqbCpoch6YjvEA2pj8NQZ3HcWjO5RedSpuZ6RQJZQrDsdKFujLv4pUzkjHN0F1KZEBurIiJgKVg2YdlUerHCCy0waMeMviH2f6Id4QXLk5YHjOUm3u29v9EC7CYtEGZvNj1vjB5XISsBk2kAULMwI1lV3N2mTUHiEIJYQ7M5Mo8hontVyc4u5Drw7FFwzr9GhMHJUrWAsOgqrw57xCPwBs0hMR56OHWYVjGhVuWHZP0dh6bmDweDESW9XxcjBE4lZulqqkJ8pIw1nSIvNzo45zhtCwdRMX7k3pvG24icFoFuWxwAbseqvL3XUMnfEwFsITT0HsjfGuk5SBzuy0ul9Fhupc9fRd7l7F46tZM4Cp6E8m1N6hbGFjmw3OxCWgP5D0hWPhaI0vYaJl1ZUWE1StSz2C6AgBAuYM3OhIQBSCZKKpt9Kn9A4uG4GdauK0oEPphLGF8BRgSGbLSwuH0zvdMCkMYxE52aiwSW94PWRaKESnEKdgoZf141K9W5ElKIMbh1k7yKt8yK9YeSA3rQMICPHq2dY2Zl",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3xpjK0z5F4tXx7la8qLVQd4zJbXyg9djn5hqcn5eiz59QLSqGniXp8mL2a5X6S8FmRKmesnsvuIta9oFWYUBvK3XARQ5ovQ4sVFNCvQWPvG5oJlpGOYaOnw9xNSkO9LqmIQMLuK8d7XscVpa2my7ZqyqbCpoch6YjvEA2pj8NQZ3HcWjO5RedSpuZ6RQJZQrDsdKFujLv4pUzkjHN0F1KZEBurIiJgKVg2YdlUerHCCy0waMeMviH2f6Id4QXLk5YHjOUm3u29v9EC7CYtEGZvNj1vjB5XISsBk2kAULMwI1lV3N2mTUHiEIJYQ7M5Mo8hontVyc4u5Drw7FFwzr9GhMHJUrWAsOgqrw57xCPwBs0hMR56OHWYVjGhVuWHZP0dh6bmDweDESW9XxcjBE4lZulqqkJ8pIw1nSIvNzo45zhtCwdRMX7k3pvG24icFoFuWxwAbseqvL3XUMnfEwFsITT0HsjfGuk5SBzuy0ul9Fhupc9fRd7l7F46tZM4Cp6E8m1N6hbGFjmw3OxCWgP5D0hWPhaI0vYaJl1ZUWE1StSz2C6AgBAuYM3OhIQBSCZKKpt9Kn9A4uG4GdauK0oEPphLGF8BRgSGbLSwuH0zvdMCkMYxE52aiwSW94PWRaKESnEKdgoZf141K9W5ElKIMbh1k7yKt8yK9YeSA3rQMICPHq2dY2Zl",
+      "estimatedCost": 0.05
+    },
+    {
+      "id": "m3_x_10mm_screws",
+      "name": "M3x10mm Enclosure Screws",
+      "type": "misc",
+      "partId": "45eed9f8-b857-4d03-a554-62a4f427c282",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=M3x10mm+Countersunk+Screws&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "imageUrl": "https://m.media-amazon.com/images/I/41fXCgYOG8L._SL500_.jpg",
+      "quantity": 4,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0CT4LM8HS?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$5.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/w/wholesale-m3x10mm-countersunk-screws.html",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0CT4LM8HS?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "M3x10mm",
+      "description": "Screws for fastening the front and rear enclosure halves together.",
+      "productName": "M3x10mm Countersunk Screws",
+      "purchaseUrl": "https://www.amazon.com/dp/B0CT4LM8HS?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c3v9pEaN",
+      "estimatedCost": 0.1
+    },
+    {
+      "id": "heat_set_inserts_m2",
+      "name": "M2 Heat Set Inserts",
+      "type": "misc",
+      "partId": "daf7eec4-212d-45e1-80fc-f23f200bac29",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=M2+Brass+Heat+Set+Inserts&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "imageUrl": "https://m.media-amazon.com/images/I/51SLaqBAefL._SL500_.jpg",
+      "material": "Brass",
+      "quantity": 20,
+      "research": {
+        "specs": [
+          {
+            "label": "type",
+            "value": "Heat Set"
+          },
+          {
+            "label": "material",
+            "value": "Brass"
+          },
+          {
+            "label": "length_mm",
+            "value": "3"
+          },
+          {
+            "label": "thread_size",
+            "value": "M2"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://vector3d.shop/products/heat-set-insert-m2-standard",
+            "vendor": "Vector 3D"
+          },
+          {
+            "url": "https://www.adafruit.com/product/4255",
+            "price": "$5.95",
+            "vendor": "Adafruit"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0CS6XJSSL?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$8.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005006351445007.html?pdp_npi=6%40dis%21USD%2112.01%217.08%21%21%2181.43%2148.04%21%402140d36117793316990017919e0f77%2112000036858180035%21affd%21%21%21%211%210%21",
+            "price": "$7.08",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0CS6XJSSL?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "3.5mm OD x 4mm L",
+      "description": "Brass threaded inserts for creating strong thread points in 3D-printed parts for M2 screws.",
+      "productName": "M2 Brass Heat Set Inserts",
+      "purchaseUrl": "https://www.adafruit.com/product/4255",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxRpTpv62RXR9sVfC98GmMLkJmXC4qpbJhcQvkbxptOmgDfhTbS0PHwVgmr0VhydRzMgIoquzg3yg5D05i1x7FPxzxIl3P5mtn3X76qprXJgmg8InDgseeFkYRIIwB95RGJoFep43tAYGEBIRAZZ6LvWcRuoiSpUrlsk0dOnD41f9DJE08hfuSws15ysCxPxduPqEdOBJqzU5FbcT4r87S9pRNqEz1lIvqGk7CAWaFPWCfEmyhwfJeZhyotpqAKBEctCutEnTkheil2BxKIvRK5wXM289ycXJx4fSbLhmzszMs2qcFLR13Wi4UnbxDD6WoLWN4JoGn2r0OhAiiRT4qjn0FYprDlHrME0i509kbi4K203jbbPK9kFZ6PlwxDGU1J3GIXNW9QMDdlachODSkFRPFiDWiBcqMh9E9VewLyHRZ0tHMAGQpwkKKwsA5Tunu4ysqc1L9X4slCg9lEp6zE1GFP3YUH6qJbHtcd5XefYaFmvAkfUXtI520kwTLxNJmZx7ca9KPzqFfBNo5i1Qgx0sLz0E7Bavlxk7D2cPZ0EQcKeHqTXt6giYhETtDqDBfydKhkK5yZSYoABmdFbjUApWm1nnctVpHC5FaxdLlT3hF5zra1BCPJw499DItDavuMeDgdYGHeYUpXeNCpVCdSjv",
+      "estimatedCost": 0.15
+    },
+    {
+      "id": "heat_set_inserts_m3",
+      "name": "M3 Heat Set Inserts",
+      "type": "misc",
+      "partId": "a218c217-5ff2-453c-bf9b-0cb77fe40758",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=M3+Brass+Heat+Set+Inserts&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "imageUrl": "https://m.media-amazon.com/images/I/51Le5SVH7JL._SL500_.jpg",
+      "quantity": 4,
+      "research": {
+        "specs": [
+          {
+            "label": "material",
+            "value": "Brass"
+          },
+          {
+            "label": "length_mm",
+            "value": "6.4"
+          },
+          {
+            "label": "application",
+            "value": "Plastic"
+          },
+          {
+            "label": "insert_type",
+            "value": "Heat-Set"
+          },
+          {
+            "label": "thread_size",
+            "value": "M3"
+          },
+          {
+            "label": "mcmaster_url",
+            "value": "https://www.mcmaster.com/94180A333"
+          },
+          {
+            "label": "thread_pitch",
+            "value": "0.5"
+          },
+          {
+            "label": "mcmaster_part_number",
+            "value": "94180A333"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.mcmaster.com/94180A333",
+            "vendor": "McMaster-Carr"
+          },
+          {
+            "url": "https://www.adafruit.com/product/4255",
+            "price": "$5.95",
+            "vendor": "Adafruit"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0CS6VZYL8?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$8.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005006351445007.html?pdp_npi=6%40dis%21USD%2112.01%216.25%21%21%2181.43%2142.41%21%402141149b17793251850437285e1158%2112000036858180035%21affd%21%21%21%211%210%21",
+            "price": "$6.25",
+            "vendor": "AliExpress"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "McMaster-Carr M3 Brass Heat-Set Insert, 3.8mm Length",
+            "reason": "A shorter M3 brass heat-set insert option from McMaster-Carr, part number 94180A331 (M3-.5 Internal Thread, 3.8mm Length)."
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0CS6VZYL8?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "5mm OD x 5mm L",
+      "description": "Brass threaded inserts for creating strong thread points in 3D-printed parts for M3 screws.",
+      "productName": "M3 Brass Heat Set Inserts",
+      "purchaseUrl": "https://www.adafruit.com/product/4255",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxRpTpv62RXR9sVfC98GmMLkJmXC4qpbJhcQvkbxptOmgDfhTbS0PHwVgmr0VhydRzMgIoquzg3yg5D05i1x7FPxzxIl3P5mtn3X76qprXJgmg8InDgseeFkYRIIwB95RGJoFep43tAYGEBIRAZZ6LvWcRuoiSpUrlsk0dOnD41f9DJE08hfuSws15ysCxPxduPqEdOBJqzG04NUdFJ3bWrfijdWCN43CSC9mYDkrFhwwBbQVz82VhOIzQnJDGqhjn3119Vw7ZBsbw5zNsuKCnHfhCbxRPNLdII35nubRaiPuAYxgMIty1KMm8HZY6F24WzUNGNr5Ay28BHTyNjrjgt37wwssKrFvlAkOc5eRVIfTsSPf00gPtpAnzrYCtO6pa4kt7Oim5FLl2fo9qzTlncqIyd0FnXRaj8FR9jadMKDscIUwEZtfGnXX3P4fbw1kDhD2QSSJMAn5RvUfmbQoftnN7hwclCo2YteNbSFQAlUTLnDvyAuTFcIVw4tUUdoYhbRuWVI1mNuQLwgrpJQ8M1sDLKul4ZypKQqK0WzxjP33EG9LwNWvX48ub96mvj0CpIbLhMAbjsoKwt5GdKy2tzmAgkWEcWjNuBrzPdW6qbqkvKztM8k9TpouDclbRaxH4aTLDpxLZe7KN7MOAMFYQW5H",
+      "estimatedCost": 0.2
+    },
+    {
+      "id": "lpddr5_ram_mount",
+      "name": "LPDDR5 RAM Module Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "lpddr5_ram",
+      "dimensions": "50x40x12mm",
+      "description": "Adapter plate for the LPDDR5 RAM Module that bolts to the main chassis with M3 hardware. Includes wire-routing channels.",
+      "purchaseUrl": "",
+      "estimatedCost": 2,
+      "printSettings": "30% infill, 0.2mm layer, 4 perimeters"
+    },
+    {
+      "id": "nvme_storage_256gb_mount",
+      "name": "NVMe Internal Storage 256GB Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "nvme_storage_256gb",
+      "dimensions": "50x40x12mm",
+      "description": "Adapter plate for the NVMe Internal Storage 256GB that bolts to the main chassis with M3 hardware. Includes wire-routing channels.",
+      "purchaseUrl": "",
+      "estimatedCost": 2,
+      "printSettings": "30% infill, 0.2mm layer, 4 perimeters"
+    },
+    {
+      "id": "wifi6e_bluetooth_module_mount",
+      "name": "Wi-Fi 6E & Bluetooth 5.3 Module Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "wifi6e_bluetooth_module",
+      "dimensions": "50x40x12mm",
+      "description": "Adapter plate for the Wi-Fi 6E & Bluetooth 5.3 Module that bolts to the main chassis with M3 hardware. Includes wire-routing channels.",
+      "purchaseUrl": "",
+      "estimatedCost": 2,
+      "printSettings": "30% infill, 0.2mm layer, 4 perimeters"
+    },
+    {
+      "id": "nfc_module_mount",
+      "name": "NFC Module Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "nfc_module",
+      "dimensions": "50x40x12mm",
+      "description": "Adapter plate for the NFC Module that bolts to the main chassis with M3 hardware. Includes wire-routing channels.",
+      "purchaseUrl": "",
+      "estimatedCost": 2,
+      "printSettings": "30% infill, 0.2mm layer, 4 perimeters"
+    },
+    {
+      "id": "sub_ghz_transceiver_cc1101_mount",
+      "name": "Sub-GHz Transceiver (433/868/915 MHz) Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "sub_ghz_transceiver_cc1101",
+      "dimensions": "50x40x12mm",
+      "description": "Adapter plate for the Sub-GHz Transceiver (433/868/915 MHz) that bolts to the main chassis with M3 hardware. Includes wire-routing channels.",
+      "purchaseUrl": "",
+      "estimatedCost": 2,
+      "printSettings": "30% infill, 0.2mm layer, 4 perimeters"
+    },
+    {
+      "id": "multi_rfid_module_mount",
+      "name": "Multi-Frequency RFID Module Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "multi_rfid_module",
+      "dimensions": "50x40x12mm",
+      "description": "Adapter plate for the Multi-Frequency RFID Module that bolts to the main chassis with M3 hardware. Includes wire-routing channels.",
+      "purchaseUrl": "",
+      "estimatedCost": 2,
+      "printSettings": "30% infill, 0.2mm layer, 4 perimeters"
+    },
+    {
+      "id": "touchscreen_controller_mount",
+      "name": "Touchscreen Controller IC Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "touchscreen_controller",
+      "dimensions": "50x40x12mm",
+      "description": "Adapter plate for the Touchscreen Controller IC that bolts to the main chassis with M3 hardware. Includes wire-routing channels.",
+      "purchaseUrl": "",
+      "estimatedCost": 2,
+      "printSettings": "30% infill, 0.2mm layer, 4 perimeters"
+    },
+    {
+      "id": "accelerometer_gyroscope_mount",
+      "name": "Accelerometer & Gyroscope Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "accelerometer_gyroscope",
+      "dimensions": "30x30x15mm",
+      "description": "Form-fitting cradle for the Accelerometer & Gyroscope that holds the sensing surface in its rated orientation. Snap-fit retention so it can be removed for calibration without tools.",
+      "purchaseUrl": "",
+      "estimatedCost": 2,
+      "printSettings": "30% infill, 0.2mm layer, 4 perimeters"
+    }
+  ],
+  "notes": [
+    "compact 6x3x1 inch",
+    "advanced 4k display",
+    "touchscreen",
+    "AI capabilities",
+    "mobile-computer function",
+    "flipper pro capabilities"
+  ],
+  "projectName": "Advanced Pocket Computer",
+  "originalPrompt": "Create a custom and advanced product which will be same as and have the same capabilities as flipper pro, along with other most popular latest and greatest features and AI capabilities available in the current market. it should be not bigger in size than a 6 x 3 x 1 inch, have touchscreen advanced 4k display like an advanced smartphone, and will also be able to act as a mobile-computer.",
+  "instructionSteps": [
+    {
+      "id": "fabricate",
+      "subSteps": [
+        {
+          "id": "fabricate_1",
+          "title": "3D print all enclosure parts and module mounts",
+          "partIds": [
+            "enclosure_front_housing",
+            "enclosure_rear_housing",
+            "display_bezel",
+            "main_pcb_mount",
+            "battery_holder",
+            "button_power_mount",
+            "button_fn1_mount",
+            "button_fn2_mount",
+            "scroll_wheel_mount",
+            "joystick_mount",
+            "lpddr5_ram_mount",
+            "nvme_storage_256gb_mount",
+            "wifi6e_bluetooth_module_mount",
+            "nfc_module_mount",
+            "sub_ghz_transceiver_cc1101_mount",
+            "multi_rfid_module_mount",
+            "touchscreen_controller_mount",
+            "accelerometer_gyroscope_mount"
+          ]
+        },
+        {
+          "id": "fabricate_2",
+          "title": "Install M3 heat-set inserts into the rear enclosure housing",
+          "partIds": [
+            "enclosure_rear_housing",
+            "heat_set_inserts_m3"
+          ]
+        },
+        {
+          "id": "fabricate_3",
+          "title": "Install M2 heat-set inserts into front/rear enclosure housing and all printed mounts",
+          "partIds": [
+            "enclosure_front_housing",
+            "enclosure_rear_housing",
+            "main_pcb_mount",
+            "battery_holder",
+            "button_power_mount",
+            "button_fn1_mount",
+            "button_fn2_mount",
+            "scroll_wheel_mount",
+            "joystick_mount",
+            "lpddr5_ram_mount",
+            "nvme_storage_256gb_mount",
+            "wifi6e_bluetooth_module_mount",
+            "nfc_module_mount",
+            "sub_ghz_transceiver_cc1101_mount",
+            "multi_rfid_module_mount",
+            "touchscreen_controller_mount",
+            "accelerometer_gyroscope_mount",
+            "heat_set_inserts_m2"
+          ]
+        },
+        {
+          "id": "fabricate_4",
+          "title": "Test fit the display into the display bezel and front enclosure",
+          "partIds": [
+            "display_4k_amoled",
+            "display_bezel",
+            "enclosure_front_housing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wire",
+      "subSteps": [
+        {
+          "id": "wire_1",
+          "title": "Solder the Main System-on-Chip (SoC) and Power Management IC (PMIC) to the main PCB",
+          "partIds": [
+            "main_soc",
+            "power_management_ic"
+          ]
+        },
+        {
+          "id": "wire_2",
+          "title": "Solder the USB-C Power Delivery Controller and LPDDR5 RAM Module to the main PCB",
+          "partIds": [
+            "usb_c_pd_controller",
+            "lpddr5_ram"
+          ]
+        },
+        {
+          "id": "wire_3",
+          "title": "Connect the NVMe Storage, Wi-Fi/Bluetooth, NFC, Sub-GHz, and RFID modules to the main PCB",
+          "partIds": [
+            "nvme_storage_256gb",
+            "wifi6e_bluetooth_module",
+            "nfc_module",
+            "sub_ghz_transceiver_cc1101",
+            "multi_rfid_module"
+          ]
+        },
+        {
+          "id": "wire_4",
+          "title": "Connect the Accelerometer/Gyroscope and Touchscreen Controller to the main PCB",
+          "partIds": [
+            "accelerometer_gyroscope",
+            "touchscreen_controller"
+          ]
+        },
+        {
+          "id": "wire_5",
+          "title": "Wire the display to the main PCB (MIPI_DSI) and connect the touchscreen I2C to the controller",
+          "partIds": [
+            "display_4k_amoled",
+            "main_soc",
+            "touchscreen_controller"
+          ]
+        },
+        {
+          "id": "wire_6",
+          "title": "Wire all tactile buttons, scroll wheel, and joystick to the main PCB",
+          "partIds": [
+            "tactile_button_power",
+            "tactile_button_fn1",
+            "tactile_button_fn2",
+            "scroll_wheel_encoder",
+            "compact_joystick",
+            "main_soc"
+          ]
+        },
+        {
+          "id": "wire_7",
+          "title": "Connect the Li-Po battery to the PMIC and USB-C PD controller to PMIC",
+          "partIds": [
+            "li_po_battery",
+            "power_management_ic",
+            "usb_c_pd_controller"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bringup",
+      "subSteps": [
+        {
+          "id": "bringup_1",
+          "title": "Perform initial continuity checks on all power and data lines",
+          "partIds": []
+        },
+        {
+          "id": "bringup_2",
+          "title": "Connect external power via USB-C and verify power rails from PMIC to all modules",
+          "partIds": [
+            "usb_c_pd_controller",
+            "power_management_ic"
+          ]
+        },
+        {
+          "id": "bringup_3",
+          "title": "Flash initial bootloader and basic firmware to the Main SoC",
+          "partIds": [
+            "main_soc"
+          ]
+        },
+        {
+          "id": "bringup_4",
+          "title": "Verify display output and touchscreen input functionality",
+          "partIds": [
+            "display_4k_amoled",
+            "touchscreen_controller",
+            "main_soc"
+          ]
+        },
+        {
+          "id": "bringup_5",
+          "title": "Test basic functionality of NVMe storage, Wi-Fi/Bluetooth, NFC, Sub-GHz, RFID modules",
+          "partIds": [
+            "nvme_storage_256gb",
+            "wifi6e_bluetooth_module",
+            "nfc_module",
+            "sub_ghz_transceiver_cc1101",
+            "multi_rfid_module",
+            "main_soc"
+          ]
+        },
+        {
+          "id": "bringup_6",
+          "title": "Verify Accelerometer/Gyroscope and all button/input responses",
+          "partIds": [
+            "accelerometer_gyroscope",
+            "tactile_button_power",
+            "tactile_button_fn1",
+            "tactile_button_fn2",
+            "scroll_wheel_encoder",
+            "compact_joystick",
+            "main_soc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "assemble",
+      "subSteps": [
+        {
+          "id": "assemble_1",
+          "title": "Mount the Main PCB onto the main PCB mount using M2x6mm screws",
+          "partIds": [
+            "main_pcb_mount",
+            "m2_x_6mm_screws",
+            "main_soc",
+            "power_management_ic",
+            "usb_c_pd_controller",
+            "lpddr5_ram"
+          ]
+        },
+        {
+          "id": "assemble_2",
+          "title": "Mount all electrical modules into their respective 3D printed mounts and secure to main PCB mount with M2x6mm screws",
+          "partIds": [
+            "lpddr5_ram_mount",
+            "nvme_storage_256gb_mount",
+            "wifi6e_bluetooth_module_mount",
+            "nfc_module_mount",
+            "sub_ghz_transceiver_cc1101_mount",
+            "multi_rfid_module_mount",
+            "touchscreen_controller_mount",
+            "accelerometer_gyroscope_mount",
+            "nvme_storage_256gb",
+            "wifi6e_bluetooth_module",
+            "nfc_module",
+            "sub_ghz_transceiver_cc1101",
+            "multi_rfid_module",
+            "touchscreen_controller",
+            "accelerometer_gyroscope",
+            "m2_x_6mm_screws"
+          ]
+        },
+        {
+          "id": "assemble_3",
+          "title": "Mount the Li-Po battery into its holder and secure the holder to the rear enclosure with M2x6mm screws",
+          "partIds": [
+            "li_po_battery",
+            "battery_holder",
+            "enclosure_rear_housing",
+            "m2_x_6mm_screws"
+          ]
+        },
+        {
+          "id": "assemble_4",
+          "title": "Mount all buttons, scroll wheel, and joystick into their mounts and secure to the front enclosure with M2x6mm screws",
+          "partIds": [
+            "tactile_button_power",
+            "button_power_mount",
+            "tactile_button_fn1",
+            "button_fn1_mount",
+            "tactile_button_fn2",
+            "button_fn2_mount",
+            "scroll_wheel_encoder",
+            "scroll_wheel_mount",
+            "compact_joystick",
+            "joystick_mount",
+            "enclosure_front_housing",
+            "m2_x_6mm_screws"
+          ]
+        },
+        {
+          "id": "assemble_5",
+          "title": "Secure the display into the display bezel and then secure the bezel to the front enclosure with M2x6mm screws",
+          "partIds": [
+            "display_4k_amoled",
+            "display_bezel",
+            "enclosure_front_housing",
+            "m2_x_6mm_screws"
+          ]
+        },
+        {
+          "id": "assemble_6",
+          "title": "Route all internal wires and carefully close the rear enclosure onto the front enclosure",
+          "partIds": [
+            "enclosure_front_housing",
+            "enclosure_rear_housing"
+          ]
+        },
+        {
+          "id": "assemble_7",
+          "title": "Fasten the front and rear enclosure halves together using M3x10mm screws",
+          "partIds": [
+            "enclosure_front_housing",
+            "enclosure_rear_housing",
+            "m3_x_10mm_screws"
+          ]
+        },
+        {
+          "id": "assemble_8",
+          "title": "Perform a final system function test to confirm all components are operational",
+          "partIds": []
+        }
+      ]
+    }
+  ],
+  "projectDescription": "An advanced pocket computer integrates Flipper Pro capabilities (sub-GHz, RFID, NFC) with a powerful SoC and AI, all displayed on a 4K AMOLED touchscreen. This 6x3x1 inch device functions as a portable mobile-computing platform, powered by a high-density Li-Po battery.",
+  "instructionPreamble": {
+    "tools": [
+      "3D printer (PETG and ABS capable, with fine nozzle for 0.1mm layer height)",
+      "Soldering iron with fine tip",
+      "Solder (fine gauge)",
+      "Flux",
+      "Desoldering wick/pump",
+      "Multimeter (for continuity and voltage checks)",
+      "Precision screwdriver set (M2, M3 sizes)",
+      "Wire cutters/strippers",
+      "Tweezers (for small components and heat-set inserts)",
+      "Heat gun (optional, for heat-set inserts)"
+    ],
+    "assumptions": [
+      "Builder has basic soldering skills for surface-mount components and pin headers",
+      "Access to a computer for flashing firmware and testing software",
+      "Familiarity with basic electronics and mechanical assembly principles",
+      "A suitable USB-C power adapter for initial power-up and charging"
+    ]
+  },
+  "electricalConnections": [
+    {
+      "type": "power",
+      "label": "Battery to PMIC",
+      "source": "li_po_battery",
+      "target": "power_management_ic",
+      "current": "2A",
+      "voltage": "3.7V"
+    },
+    {
+      "type": "power",
+      "label": "USB-C to PMIC (Charging/Input)",
+      "source": "usb_c_pd_controller",
+      "target": "power_management_ic",
+      "current": "3A",
+      "voltage": "5V"
+    },
+    {
+      "type": "data",
+      "source": "usb_c_pd_controller",
+      "target": "main_soc",
+      "protocol": "usb",
+      "sourcePin": "USB_C_CC",
+      "targetPin": "USB3.0"
+    },
+    {
+      "type": "data",
+      "label": "SoC PMIC Control",
+      "source": "main_soc",
+      "target": "power_management_ic",
+      "protocol": "i2c",
+      "sourcePin": "I2C",
+      "targetPin": "I2C"
+    },
+    {
+      "type": "power",
+      "label": "PMIC to SoC Core",
+      "source": "power_management_ic",
+      "target": "main_soc",
+      "current": "5A",
+      "voltage": "1.2V"
+    },
+    {
+      "type": "power",
+      "label": "PMIC to SoC IO",
+      "source": "power_management_ic",
+      "target": "main_soc",
+      "current": "1A",
+      "voltage": "3.3V"
+    },
+    {
+      "type": "power",
+      "label": "PMIC to LPDDR5",
+      "source": "power_management_ic",
+      "target": "lpddr5_ram",
+      "current": "1.5A",
+      "voltage": "1.05V"
+    },
+    {
+      "type": "data",
+      "source": "main_soc",
+      "target": "lpddr5_ram",
+      "protocol": "lpddr5",
+      "sourcePin": "LPDDR5",
+      "targetPin": "SoC_LPDDR5_Interface"
+    },
+    {
+      "type": "power",
+      "label": "PMIC to NVMe",
+      "source": "power_management_ic",
+      "target": "nvme_storage_256gb",
+      "current": "1A",
+      "voltage": "3.3V"
+    },
+    {
+      "type": "data",
+      "source": "main_soc",
+      "target": "nvme_storage_256gb",
+      "protocol": "pcie",
+      "sourcePin": "PCIe",
+      "targetPin": "PCIe_M.2"
+    },
+    {
+      "type": "power",
+      "label": "PMIC to WiFi/BT",
+      "source": "power_management_ic",
+      "target": "wifi6e_bluetooth_module",
+      "current": "800mA",
+      "voltage": "3.3V"
+    },
+    {
+      "type": "data",
+      "label": "WiFi Data",
+      "source": "main_soc",
+      "target": "wifi6e_bluetooth_module",
+      "protocol": "pcie",
+      "sourcePin": "PCIe",
+      "targetPin": "PCIe"
+    },
+    {
+      "type": "data",
+      "label": "Bluetooth Data",
+      "source": "main_soc",
+      "target": "wifi6e_bluetooth_module",
+      "protocol": "usb",
+      "sourcePin": "USB3.0",
+      "targetPin": "USB"
+    },
+    {
+      "type": "power",
+      "label": "PMIC to NFC",
+      "source": "power_management_ic",
+      "target": "nfc_module",
+      "current": "100mA",
+      "voltage": "3.3V"
+    },
+    {
+      "type": "data",
+      "source": "main_soc",
+      "target": "nfc_module",
+      "protocol": "i2c",
+      "sourcePin": "I2C",
+      "targetPin": "I2C"
+    },
+    {
+      "type": "data",
+      "label": "NFC Interrupt/Control",
+      "source": "main_soc",
+      "target": "nfc_module",
+      "protocol": "gpio",
+      "sourcePin": "GPIO",
+      "targetPin": "GPIO"
+    },
+    {
+      "type": "power",
+      "label": "PMIC to Sub-GHz",
+      "source": "power_management_ic",
+      "target": "sub_ghz_transceiver_cc1101",
+      "current": "50mA",
+      "voltage": "3.3V"
+    },
+    {
+      "type": "data",
+      "source": "main_soc",
+      "target": "sub_ghz_transceiver_cc1101",
+      "protocol": "spi",
+      "sourcePin": "SPI",
+      "targetPin": "SPI"
+    },
+    {
+      "type": "data",
+      "label": "Sub-GHz Control",
+      "source": "main_soc",
+      "target": "sub_ghz_transceiver_cc1101",
+      "protocol": "gpio",
+      "sourcePin": "GPIO",
+      "targetPin": "GPIO"
+    },
+    {
+      "type": "power",
+      "label": "PMIC to RFID",
+      "source": "power_management_ic",
+      "target": "multi_rfid_module",
+      "current": "200mA",
+      "voltage": "3.3V"
+    },
+    {
+      "type": "data",
+      "source": "main_soc",
+      "target": "multi_rfid_module",
+      "protocol": "spi",
+      "sourcePin": "SPI",
+      "targetPin": "SPI"
+    },
+    {
+      "type": "data",
+      "source": "main_soc",
+      "target": "multi_rfid_module",
+      "protocol": "uart",
+      "sourcePin": "UART",
+      "targetPin": "UART"
+    },
+    {
+      "type": "data",
+      "label": "RFID Control",
+      "source": "main_soc",
+      "target": "multi_rfid_module",
+      "protocol": "gpio",
+      "sourcePin": "GPIO",
+      "targetPin": "GPIO"
+    },
+    {
+      "type": "power",
+      "label": "PMIC to Display VDD",
+      "source": "power_management_ic",
+      "target": "display_4k_amoled",
+      "current": "1A",
+      "voltage": "5V"
+    },
+    {
+      "type": "data",
+      "source": "main_soc",
+      "target": "display_4k_amoled",
+      "protocol": "dsi",
+      "sourcePin": "MIPI_DSI",
+      "targetPin": "MIPI_DSI"
+    },
+    {
+      "type": "power",
+      "label": "PMIC to Touch Controller",
+      "source": "power_management_ic",
+      "target": "touchscreen_controller",
+      "current": "50mA",
+      "voltage": "3.3V"
+    },
+    {
+      "type": "data",
+      "source": "main_soc",
+      "target": "touchscreen_controller",
+      "protocol": "i2c",
+      "sourcePin": "I2C",
+      "targetPin": "I2C"
+    },
+    {
+      "type": "data",
+      "label": "Touch Interrupt",
+      "source": "main_soc",
+      "target": "touchscreen_controller",
+      "protocol": "gpio",
+      "sourcePin": "GPIO",
+      "targetPin": "INT"
+    },
+    {
+      "type": "data",
+      "label": "Touch Reset",
+      "source": "main_soc",
+      "target": "touchscreen_controller",
+      "protocol": "gpio",
+      "sourcePin": "GPIO",
+      "targetPin": "RESET"
+    },
+    {
+      "type": "data",
+      "label": "Display Touch Data",
+      "source": "display_4k_amoled",
+      "target": "touchscreen_controller",
+      "protocol": "i2c",
+      "sourcePin": "I2C_Touch",
+      "targetPin": "I2C"
+    },
+    {
+      "type": "power",
+      "label": "PMIC to IMU VDD",
+      "source": "power_management_ic",
+      "target": "accelerometer_gyroscope",
+      "current": "20mA",
+      "voltage": "3.3V"
+    },
+    {
+      "type": "data",
+      "source": "main_soc",
+      "target": "accelerometer_gyroscope",
+      "protocol": "i2c",
+      "sourcePin": "I2C",
+      "targetPin": "I2C"
+    },
+    {
+      "type": "data",
+      "label": "IMU Interrupt",
+      "source": "main_soc",
+      "target": "accelerometer_gyroscope",
+      "protocol": "gpio",
+      "sourcePin": "GPIO",
+      "targetPin": "INT"
+    },
+    {
+      "type": "data",
+      "label": "Power Button",
+      "source": "main_soc",
+      "target": "tactile_button_power",
+      "protocol": "gpio",
+      "sourcePin": "GPIO",
+      "targetPin": "GPIO"
+    },
+    {
+      "type": "data",
+      "label": "Function Button 1",
+      "source": "main_soc",
+      "target": "tactile_button_fn1",
+      "protocol": "gpio",
+      "sourcePin": "GPIO",
+      "targetPin": "GPIO"
+    },
+    {
+      "type": "data",
+      "label": "Function Button 2",
+      "source": "main_soc",
+      "target": "tactile_button_fn2",
+      "protocol": "gpio",
+      "sourcePin": "GPIO",
+      "targetPin": "GPIO"
+    },
+    {
+      "type": "power",
+      "label": "PMIC to Scroll Wheel VCC",
+      "source": "power_management_ic",
+      "target": "scroll_wheel_encoder",
+      "current": "10mA",
+      "voltage": "3.3V"
+    },
+    {
+      "type": "data",
+      "label": "Scroll CLK",
+      "source": "main_soc",
+      "target": "scroll_wheel_encoder",
+      "protocol": "gpio",
+      "sourcePin": "GPIO",
+      "targetPin": "CLK"
+    },
+    {
+      "type": "data",
+      "label": "Scroll DT",
+      "source": "main_soc",
+      "target": "scroll_wheel_encoder",
+      "protocol": "gpio",
+      "sourcePin": "GPIO",
+      "targetPin": "DT"
+    },
+    {
+      "type": "data",
+      "label": "Scroll Button",
+      "source": "main_soc",
+      "target": "scroll_wheel_encoder",
+      "protocol": "gpio",
+      "sourcePin": "GPIO",
+      "targetPin": "SW"
+    },
+    {
+      "type": "power",
+      "label": "PMIC to Joystick VCC",
+      "source": "power_management_ic",
+      "target": "compact_joystick",
+      "current": "15mA",
+      "voltage": "3.3V"
+    },
+    {
+      "type": "data",
+      "label": "Joystick X-axis",
+      "source": "main_soc",
+      "target": "compact_joystick",
+      "protocol": "analog",
+      "sourcePin": "GPIO",
+      "targetPin": "VRx"
+    },
+    {
+      "type": "data",
+      "label": "Joystick Y-axis",
+      "source": "main_soc",
+      "target": "compact_joystick",
+      "protocol": "analog",
+      "sourcePin": "GPIO",
+      "targetPin": "VRy"
+    },
+    {
+      "type": "data",
+      "label": "Joystick Button",
+      "source": "main_soc",
+      "target": "compact_joystick",
+      "protocol": "gpio",
+      "sourcePin": "GPIO",
+      "targetPin": "SW"
+    }
+  ],
+  "mechanicalConnections": [
+    {
+      "label": "M3x10mm screws into M3 heat set inserts",
+      "source": "enclosure_front_housing",
+      "target": "enclosure_rear_housing"
+    },
+    {
+      "label": "fastens",
+      "source": "m3_x_10mm_screws",
+      "target": "enclosure_front_housing"
+    },
+    {
+      "label": "fastens",
+      "source": "m3_x_10mm_screws",
+      "target": "enclosure_rear_housing"
+    },
+    {
+      "label": "pressed into",
+      "source": "heat_set_inserts_m3",
+      "target": "enclosure_rear_housing"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "display_bezel",
+      "target": "enclosure_front_housing"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "main_pcb_mount",
+      "target": "enclosure_rear_housing"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "battery_holder",
+      "target": "enclosure_rear_housing"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "button_power_mount",
+      "target": "enclosure_front_housing"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "button_fn1_mount",
+      "target": "enclosure_front_housing"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "button_fn2_mount",
+      "target": "enclosure_front_housing"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "scroll_wheel_mount",
+      "target": "enclosure_front_housing"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "joystick_mount",
+      "target": "enclosure_front_housing"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "lpddr5_ram_mount",
+      "target": "main_pcb_mount"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "nvme_storage_256gb_mount",
+      "target": "main_pcb_mount"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "wifi6e_bluetooth_module_mount",
+      "target": "main_pcb_mount"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "nfc_module_mount",
+      "target": "main_pcb_mount"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "sub_ghz_transceiver_cc1101_mount",
+      "target": "main_pcb_mount"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "multi_rfid_module_mount",
+      "target": "main_pcb_mount"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "touchscreen_controller_mount",
+      "target": "main_pcb_mount"
+    },
+    {
+      "label": "M2x6mm screws into M2 heat set inserts",
+      "source": "accelerometer_gyroscope_mount",
+      "target": "main_pcb_mount"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "display_bezel"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "main_pcb_mount"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "battery_holder"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "button_power_mount"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "button_fn1_mount"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "button_fn2_mount"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "scroll_wheel_mount"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "joystick_mount"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "lpddr5_ram_mount"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "nvme_storage_256gb_mount"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "wifi6e_bluetooth_module_mount"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "nfc_module_mount"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "sub_ghz_transceiver_cc1101_mount"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "multi_rfid_module_mount"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "touchscreen_controller_mount"
+    },
+    {
+      "label": "fastens",
+      "source": "m2_x_6mm_screws",
+      "target": "accelerometer_gyroscope_mount"
+    },
+    {
+      "label": "pressed into",
+      "source": "heat_set_inserts_m2",
+      "target": "enclosure_front_housing"
+    },
+    {
+      "label": "pressed into",
+      "source": "heat_set_inserts_m2",
+      "target": "enclosure_rear_housing"
+    },
+    {
+      "label": "pressed into",
+      "source": "heat_set_inserts_m2",
+      "target": "main_pcb_mount"
+    },
+    {
+      "label": "mount",
+      "source": "display_bezel",
+      "target": "display_4k_amoled"
+    },
+    {
+      "label": "mount",
+      "source": "main_pcb_mount",
+      "target": "main_soc"
+    },
+    {
+      "label": "mount",
+      "source": "battery_holder",
+      "target": "li_po_battery"
+    },
+    {
+      "label": "mount",
+      "source": "button_power_mount",
+      "target": "tactile_button_power"
+    },
+    {
+      "label": "mount",
+      "source": "button_fn1_mount",
+      "target": "tactile_button_fn1"
+    },
+    {
+      "label": "mount",
+      "source": "button_fn2_mount",
+      "target": "tactile_button_fn2"
+    },
+    {
+      "label": "mount",
+      "source": "scroll_wheel_mount",
+      "target": "scroll_wheel_encoder"
+    },
+    {
+      "label": "mount",
+      "source": "joystick_mount",
+      "target": "compact_joystick"
+    },
+    {
+      "label": "mount",
+      "source": "lpddr5_ram_mount",
+      "target": "lpddr5_ram"
+    },
+    {
+      "label": "mount",
+      "source": "nvme_storage_256gb_mount",
+      "target": "nvme_storage_256gb"
+    },
+    {
+      "label": "mount",
+      "source": "wifi6e_bluetooth_module_mount",
+      "target": "wifi6e_bluetooth_module"
+    },
+    {
+      "label": "mount",
+      "source": "nfc_module_mount",
+      "target": "nfc_module"
+    },
+    {
+      "label": "mount",
+      "source": "sub_ghz_transceiver_cc1101_mount",
+      "target": "sub_ghz_transceiver_cc1101"
+    },
+    {
+      "label": "mount",
+      "source": "multi_rfid_module_mount",
+      "target": "multi_rfid_module"
+    },
+    {
+      "label": "mount",
+      "source": "touchscreen_controller_mount",
+      "target": "touchscreen_controller"
+    },
+    {
+      "label": "mount",
+      "source": "accelerometer_gyroscope_mount",
+      "target": "accelerometer_gyroscope"
+    }
+  ],
+  "projectId": "1d48ea73-3814-4966-a567-cde1b310c9ca",
+  "imagePromptSnapshot": {
+    "description": "Create a custom and advanced product which will be same as and have the same capabilities as flipper pro, along with other most popular latest and greatest features and AI capabilities available in the current market. it should be not bigger in size than a 6 x 3 x 1 inch, have touchscreen advanced 4k display like an advanced smartphone, and will also be able to act as a mobile-computer.",
+    "tags": [
+      "compact 6x3x1 inch",
+      "advanced 4k display",
+      "touchscreen",
+      "AI capabilities",
+      "mobile-computer function",
+      "flipper pro capabilities"
+    ],
+    "technicalDescription": "An advanced pocket computer integrates Flipper Pro capabilities (sub-GHz, RFID, NFC) with a powerful SoC and AI, all displayed on a 4K AMOLED touchscreen. This 6x3x1 inch device functions as a portable mobile-computing platform, powered by a high-density Li-Po battery."
+  }
+}

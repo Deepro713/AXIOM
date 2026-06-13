@@ -1,0 +1,11 @@
+# Claude Code local settings
+.claude/
+
+# Vercel
+.vercel/
+
+# macOS
+.DS_Store
+
+# Node (in case tooling is added later)
+node_modules/

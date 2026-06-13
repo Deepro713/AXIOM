@@ -1,0 +1,373 @@
+[
+  {
+    "type": "power",
+    "label": "Battery to PMIC",
+    "source": "li_po_battery",
+    "target": "power_management_ic",
+    "current": "2A",
+    "voltage": "3.7V"
+  },
+  {
+    "type": "power",
+    "label": "USB-C to PMIC (Charging/Input)",
+    "source": "usb_c_pd_controller",
+    "target": "power_management_ic",
+    "current": "3A",
+    "voltage": "5V"
+  },
+  {
+    "type": "data",
+    "source": "usb_c_pd_controller",
+    "target": "main_soc",
+    "protocol": "usb",
+    "sourcePin": "USB_C_CC",
+    "targetPin": "USB3.0"
+  },
+  {
+    "type": "data",
+    "label": "SoC PMIC Control",
+    "source": "main_soc",
+    "target": "power_management_ic",
+    "protocol": "i2c",
+    "sourcePin": "I2C",
+    "targetPin": "I2C"
+  },
+  {
+    "type": "power",
+    "label": "PMIC to SoC Core",
+    "source": "power_management_ic",
+    "target": "main_soc",
+    "current": "5A",
+    "voltage": "1.2V"
+  },
+  {
+    "type": "power",
+    "label": "PMIC to SoC IO",
+    "source": "power_management_ic",
+    "target": "main_soc",
+    "current": "1A",
+    "voltage": "3.3V"
+  },
+  {
+    "type": "power",
+    "label": "PMIC to LPDDR5",
+    "source": "power_management_ic",
+    "target": "lpddr5_ram",
+    "current": "1.5A",
+    "voltage": "1.05V"
+  },
+  {
+    "type": "data",
+    "source": "main_soc",
+    "target": "lpddr5_ram",
+    "protocol": "lpddr5",
+    "sourcePin": "LPDDR5",
+    "targetPin": "SoC_LPDDR5_Interface"
+  },
+  {
+    "type": "power",
+    "label": "PMIC to NVMe",
+    "source": "power_management_ic",
+    "target": "nvme_storage_256gb",
+    "current": "1A",
+    "voltage": "3.3V"
+  },
+  {
+    "type": "data",
+    "source": "main_soc",
+    "target": "nvme_storage_256gb",
+    "protocol": "pcie",
+    "sourcePin": "PCIe",
+    "targetPin": "PCIe_M.2"
+  },
+  {
+    "type": "power",
+    "label": "PMIC to WiFi/BT",
+    "source": "power_management_ic",
+    "target": "wifi6e_bluetooth_module",
+    "current": "800mA",
+    "voltage": "3.3V"
+  },
+  {
+    "type": "data",
+    "label": "WiFi Data",
+    "source": "main_soc",
+    "target": "wifi6e_bluetooth_module",
+    "protocol": "pcie",
+    "sourcePin": "PCIe",
+    "targetPin": "PCIe"
+  },
+  {
+    "type": "data",
+    "label": "Bluetooth Data",
+    "source": "main_soc",
+    "target": "wifi6e_bluetooth_module",
+    "protocol": "usb",
+    "sourcePin": "USB3.0",
+    "targetPin": "USB"
+  },
+  {
+    "type": "power",
+    "label": "PMIC to NFC",
+    "source": "power_management_ic",
+    "target": "nfc_module",
+    "current": "100mA",
+    "voltage": "3.3V"
+  },
+  {
+    "type": "data",
+    "source": "main_soc",
+    "target": "nfc_module",
+    "protocol": "i2c",
+    "sourcePin": "I2C",
+    "targetPin": "I2C"
+  },
+  {
+    "type": "data",
+    "label": "NFC Interrupt/Control",
+    "source": "main_soc",
+    "target": "nfc_module",
+    "protocol": "gpio",
+    "sourcePin": "GPIO",
+    "targetPin": "GPIO"
+  },
+  {
+    "type": "power",
+    "label": "PMIC to Sub-GHz",
+    "source": "power_management_ic",
+    "target": "sub_ghz_transceiver_cc1101",
+    "current": "50mA",
+    "voltage": "3.3V"
+  },
+  {
+    "type": "data",
+    "source": "main_soc",
+    "target": "sub_ghz_transceiver_cc1101",
+    "protocol": "spi",
+    "sourcePin": "SPI",
+    "targetPin": "SPI"
+  },
+  {
+    "type": "data",
+    "label": "Sub-GHz Control",
+    "source": "main_soc",
+    "target": "sub_ghz_transceiver_cc1101",
+    "protocol": "gpio",
+    "sourcePin": "GPIO",
+    "targetPin": "GPIO"
+  },
+  {
+    "type": "power",
+    "label": "PMIC to RFID",
+    "source": "power_management_ic",
+    "target": "multi_rfid_module",
+    "current": "200mA",
+    "voltage": "3.3V"
+  },
+  {
+    "type": "data",
+    "source": "main_soc",
+    "target": "multi_rfid_module",
+    "protocol": "spi",
+    "sourcePin": "SPI",
+    "targetPin": "SPI"
+  },
+  {
+    "type": "data",
+    "source": "main_soc",
+    "target": "multi_rfid_module",
+    "protocol": "uart",
+    "sourcePin": "UART",
+    "targetPin": "UART"
+  },
+  {
+    "type": "data",
+    "label": "RFID Control",
+    "source": "main_soc",
+    "target": "multi_rfid_module",
+    "protocol": "gpio",
+    "sourcePin": "GPIO",
+    "targetPin": "GPIO"
+  },
+  {
+    "type": "power",
+    "label": "PMIC to Display VDD",
+    "source": "power_management_ic",
+    "target": "display_4k_amoled",
+    "current": "1A",
+    "voltage": "5V"
+  },
+  {
+    "type": "data",
+    "source": "main_soc",
+    "target": "display_4k_amoled",
+    "protocol": "dsi",
+    "sourcePin": "MIPI_DSI",
+    "targetPin": "MIPI_DSI"
+  },
+  {
+    "type": "power",
+    "label": "PMIC to Touch Controller",
+    "source": "power_management_ic",
+    "target": "touchscreen_controller",
+    "current": "50mA",
+    "voltage": "3.3V"
+  },
+  {
+    "type": "data",
+    "source": "main_soc",
+    "target": "touchscreen_controller",
+    "protocol": "i2c",
+    "sourcePin": "I2C",
+    "targetPin": "I2C"
+  },
+  {
+    "type": "data",
+    "label": "Touch Interrupt",
+    "source": "main_soc",
+    "target": "touchscreen_controller",
+    "protocol": "gpio",
+    "sourcePin": "GPIO",
+    "targetPin": "INT"
+  },
+  {
+    "type": "data",
+    "label": "Touch Reset",
+    "source": "main_soc",
+    "target": "touchscreen_controller",
+    "protocol": "gpio",
+    "sourcePin": "GPIO",
+    "targetPin": "RESET"
+  },
+  {
+    "type": "data",
+    "label": "Display Touch Data",
+    "source": "display_4k_amoled",
+    "target": "touchscreen_controller",
+    "protocol": "i2c",
+    "sourcePin": "I2C_Touch",
+    "targetPin": "I2C"
+  },
+  {
+    "type": "power",
+    "label": "PMIC to IMU VDD",
+    "source": "power_management_ic",
+    "target": "accelerometer_gyroscope",
+    "current": "20mA",
+    "voltage": "3.3V"
+  },
+  {
+    "type": "data",
+    "source": "main_soc",
+    "target": "accelerometer_gyroscope",
+    "protocol": "i2c",
+    "sourcePin": "I2C",
+    "targetPin": "I2C"
+  },
+  {
+    "type": "data",
+    "label": "IMU Interrupt",
+    "source": "main_soc",
+    "target": "accelerometer_gyroscope",
+    "protocol": "gpio",
+    "sourcePin": "GPIO",
+    "targetPin": "INT"
+  },
+  {
+    "type": "data",
+    "label": "Power Button",
+    "source": "main_soc",
+    "target": "tactile_button_power",
+    "protocol": "gpio",
+    "sourcePin": "GPIO",
+    "targetPin": "GPIO"
+  },
+  {
+    "type": "data",
+    "label": "Function Button 1",
+    "source": "main_soc",
+    "target": "tactile_button_fn1",
+    "protocol": "gpio",
+    "sourcePin": "GPIO",
+    "targetPin": "GPIO"
+  },
+  {
+    "type": "data",
+    "label": "Function Button 2",
+    "source": "main_soc",
+    "target": "tactile_button_fn2",
+    "protocol": "gpio",
+    "sourcePin": "GPIO",
+    "targetPin": "GPIO"
+  },
+  {
+    "type": "power",
+    "label": "PMIC to Scroll Wheel VCC",
+    "source": "power_management_ic",
+    "target": "scroll_wheel_encoder",
+    "current": "10mA",
+    "voltage": "3.3V"
+  },
+  {
+    "type": "data",
+    "label": "Scroll CLK",
+    "source": "main_soc",
+    "target": "scroll_wheel_encoder",
+    "protocol": "gpio",
+    "sourcePin": "GPIO",
+    "targetPin": "CLK"
+  },
+  {
+    "type": "data",
+    "label": "Scroll DT",
+    "source": "main_soc",
+    "target": "scroll_wheel_encoder",
+    "protocol": "gpio",
+    "sourcePin": "GPIO",
+    "targetPin": "DT"
+  },
+  {
+    "type": "data",
+    "label": "Scroll Button",
+    "source": "main_soc",
+    "target": "scroll_wheel_encoder",
+    "protocol": "gpio",
+    "sourcePin": "GPIO",
+    "targetPin": "SW"
+  },
+  {
+    "type": "power",
+    "label": "PMIC to Joystick VCC",
+    "source": "power_management_ic",
+    "target": "compact_joystick",
+    "current": "15mA",
+    "voltage": "3.3V"
+  },
+  {
+    "type": "data",
+    "label": "Joystick X-axis",
+    "source": "main_soc",
+    "target": "compact_joystick",
+    "protocol": "analog",
+    "sourcePin": "GPIO",
+    "targetPin": "VRx"
+  },
+  {
+    "type": "data",
+    "label": "Joystick Y-axis",
+    "source": "main_soc",
+    "target": "compact_joystick",
+    "protocol": "analog",
+    "sourcePin": "GPIO",
+    "targetPin": "VRy"
+  },
+  {
+    "type": "data",
+    "label": "Joystick Button",
+    "source": "main_soc",
+    "target": "compact_joystick",
+    "protocol": "gpio",
+    "sourcePin": "GPIO",
+    "targetPin": "SW"
+  }
+]

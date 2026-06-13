@@ -1,0 +1,277 @@
+[
+  {
+    "label": "M3x10mm screws into M3 heat set inserts",
+    "source": "enclosure_front_housing",
+    "target": "enclosure_rear_housing"
+  },
+  {
+    "label": "fastens",
+    "source": "m3_x_10mm_screws",
+    "target": "enclosure_front_housing"
+  },
+  {
+    "label": "fastens",
+    "source": "m3_x_10mm_screws",
+    "target": "enclosure_rear_housing"
+  },
+  {
+    "label": "pressed into",
+    "source": "heat_set_inserts_m3",
+    "target": "enclosure_rear_housing"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "display_bezel",
+    "target": "enclosure_front_housing"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "main_pcb_mount",
+    "target": "enclosure_rear_housing"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "battery_holder",
+    "target": "enclosure_rear_housing"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "button_power_mount",
+    "target": "enclosure_front_housing"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "button_fn1_mount",
+    "target": "enclosure_front_housing"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "button_fn2_mount",
+    "target": "enclosure_front_housing"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "scroll_wheel_mount",
+    "target": "enclosure_front_housing"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "joystick_mount",
+    "target": "enclosure_front_housing"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "lpddr5_ram_mount",
+    "target": "main_pcb_mount"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "nvme_storage_256gb_mount",
+    "target": "main_pcb_mount"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "wifi6e_bluetooth_module_mount",
+    "target": "main_pcb_mount"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "nfc_module_mount",
+    "target": "main_pcb_mount"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "sub_ghz_transceiver_cc1101_mount",
+    "target": "main_pcb_mount"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "multi_rfid_module_mount",
+    "target": "main_pcb_mount"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "touchscreen_controller_mount",
+    "target": "main_pcb_mount"
+  },
+  {
+    "label": "M2x6mm screws into M2 heat set inserts",
+    "source": "accelerometer_gyroscope_mount",
+    "target": "main_pcb_mount"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "display_bezel"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "main_pcb_mount"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "battery_holder"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "button_power_mount"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "button_fn1_mount"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "button_fn2_mount"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "scroll_wheel_mount"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "joystick_mount"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "lpddr5_ram_mount"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "nvme_storage_256gb_mount"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "wifi6e_bluetooth_module_mount"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "nfc_module_mount"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "sub_ghz_transceiver_cc1101_mount"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "multi_rfid_module_mount"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "touchscreen_controller_mount"
+  },
+  {
+    "label": "fastens",
+    "source": "m2_x_6mm_screws",
+    "target": "accelerometer_gyroscope_mount"
+  },
+  {
+    "label": "pressed into",
+    "source": "heat_set_inserts_m2",
+    "target": "enclosure_front_housing"
+  },
+  {
+    "label": "pressed into",
+    "source": "heat_set_inserts_m2",
+    "target": "enclosure_rear_housing"
+  },
+  {
+    "label": "pressed into",
+    "source": "heat_set_inserts_m2",
+    "target": "main_pcb_mount"
+  },
+  {
+    "label": "mount",
+    "source": "display_bezel",
+    "target": "display_4k_amoled"
+  },
+  {
+    "label": "mount",
+    "source": "main_pcb_mount",
+    "target": "main_soc"
+  },
+  {
+    "label": "mount",
+    "source": "battery_holder",
+    "target": "li_po_battery"
+  },
+  {
+    "label": "mount",
+    "source": "button_power_mount",
+    "target": "tactile_button_power"
+  },
+  {
+    "label": "mount",
+    "source": "button_fn1_mount",
+    "target": "tactile_button_fn1"
+  },
+  {
+    "label": "mount",
+    "source": "button_fn2_mount",
+    "target": "tactile_button_fn2"
+  },
+  {
+    "label": "mount",
+    "source": "scroll_wheel_mount",
+    "target": "scroll_wheel_encoder"
+  },
+  {
+    "label": "mount",
+    "source": "joystick_mount",
+    "target": "compact_joystick"
+  },
+  {
+    "label": "mount",
+    "source": "lpddr5_ram_mount",
+    "target": "lpddr5_ram"
+  },
+  {
+    "label": "mount",
+    "source": "nvme_storage_256gb_mount",
+    "target": "nvme_storage_256gb"
+  },
+  {
+    "label": "mount",
+    "source": "wifi6e_bluetooth_module_mount",
+    "target": "wifi6e_bluetooth_module"
+  },
+  {
+    "label": "mount",
+    "source": "nfc_module_mount",
+    "target": "nfc_module"
+  },
+  {
+    "label": "mount",
+    "source": "sub_ghz_transceiver_cc1101_mount",
+    "target": "sub_ghz_transceiver_cc1101"
+  },
+  {
+    "label": "mount",
+    "source": "multi_rfid_module_mount",
+    "target": "multi_rfid_module"
+  },
+  {
+    "label": "mount",
+    "source": "touchscreen_controller_mount",
+    "target": "touchscreen_controller"
+  },
+  {
+    "label": "mount",
+    "source": "accelerometer_gyroscope_mount",
+    "target": "accelerometer_gyroscope"
+  }
+]
