@@ -27,7 +27,10 @@
     doc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Zm0 0v5h5M9 13h6M9 17h6"/></svg>',
     gauge: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm1.5-3.5L17 7M4 18a9 9 0 1 1 16 0"/></svg>',
     dl: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>',
-    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>'
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>',
+    vault: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4v6c0 5-3.5 8-9 9-5.5-1-9-4-9-9Z"/><path d="M9 12l2 2 4-4"/></svg>',
+    search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>',
+    nfc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a9 9 0 0 1 12 0M9 12a5 5 0 0 1 6 0M12 15v0"/><rect x="3" y="4" width="18" height="16" rx="3"/></svg>'
   };
 
   var LATEST_FW = "1.1.0-alpha";
@@ -43,6 +46,20 @@
   function saveJSON(k, v) { try { LS.setItem(k, JSON.stringify(v)); } catch (e) {} }
   function defaultSettings() { return { battLow: 15, socHot: 85, storFull: 90, prefTransport: "auto", alerts: true }; }
 
+  // ---------- capture vault (AX-106) — seeded library; auto-captures from radio activity ----------
+  var HOUR = 3600e3;
+  function defaultCaptures() {
+    var now = Date.now();
+    return [
+      { id: "cap_7f31", type: "subghz", note: "Garage remote · 433.92 MHz", freq: "433.92 MHz", rssi: -58, size_kb: 12, tags: ["sub-ghz", "remote"], geo: { lat: 37.3349, lon: -121.8916 }, ts: now - 2 * HOUR, version: 2 },
+      { id: "cap_5a08", type: "nfc", note: "Office access fob (NTAG215)", size_kb: 0.9, tags: ["nfc", "access"], geo: null, ts: now - 5 * HOUR, version: 1 },
+      { id: "cap_b2c4", type: "rfid", note: "EM4100 125 kHz tag", size_kb: 0.1, tags: ["rfid", "125khz"], geo: null, ts: now - 26 * HOUR, version: 1 },
+      { id: "cap_91de", type: "script", note: "sweep-subghz.axs · band scan", size_kb: 3.4, tags: ["script", "sub-ghz"], geo: null, ts: now - 30 * HOUR, version: 4 },
+      { id: "cap_3ac7", type: "log", note: "RF survey · Diridon walk", size_kb: 184, tags: ["log", "survey"], geo: { lat: 37.3297, lon: -121.9026 }, ts: now - 52 * HOUR, version: 1 },
+      { id: "cap_0d6f", type: "config", note: "Field power dashboard layout", size_kb: 2.1, tags: ["config", "cast"], geo: null, ts: now - 96 * HOUR, version: 3 }
+    ];
+  }
+
   var state = {
     cm: new AXIOM.ConnectionManager(),
     device: null, transport: null,
@@ -53,6 +70,8 @@
     fwHistory: [],
     activeAlerts: {},        // key -> true while firing
     _linkDown: false,
+    captures: (LS && loadJSON("axiom.vault", null)) || defaultCaptures(),
+    vaultQuery: "", vaultTag: null, _lastCap: 0,
     settings: (LS && loadJSON("axiom.settings", defaultSettings())) || defaultSettings()
   };
 
@@ -150,6 +169,7 @@
           '<div class="brand-row">' + I.cube + '<div class="word">AXIOM</div></div>' +
           navItem("health", I.health, "Health") +
           navItem("cast", I.cast, "Cast") +
+          navItem("vault", I.vault, "Vault") +
           navItem("firmware", I.fw, "Firmware") +
           navItem("settings", I.gear, "Settings") +
           '<div class="side-foot"><div class="side-dev"><span class="d"></span>' +
@@ -174,6 +194,7 @@
     });
     if (v === "health") renderHealth();
     else if (v === "cast") renderCast();
+    else if (v === "vault") renderVault();
     else if (v === "firmware") renderFirmware();
     else if (v === "settings") renderSettings();
   }
@@ -186,6 +207,7 @@
     push(state.hist.cpu, f.compute.cpu_avg);
     state.log.push(flatten(f)); if (state.log.length > 600) state.log.shift();
     evalAlerts(f);
+    maybeAutoCapture(f);
     if (state.view === "health" && $("#m-batt")) updateHealth(f);
     if (state.view === "cast" && state.casting) drawDeviceScreen();
     updateTopLink(f);
@@ -479,6 +501,142 @@
     roundRect(x, 16, 70, W - 32, H - 110, 12, "#16131d");
     x.fillStyle = "#fff"; x.font = "700 16px Poppins"; x.fillText("AXIOM field notes", 32, 104);
     for (var i = 0; i < 14; i++) { var w = 200 - (i % 4) * 30; x.fillStyle = "#2a2733"; x.fillRect(32, 124 + i * 22, w, 7); }
+  }
+
+  // ============================================================ CAPTURE VAULT (AX-106)
+  var CAP_META = {
+    subghz: { label: "Sub-GHz", icon: "radio" },
+    nfc:    { label: "NFC",      icon: "nfc" },
+    rfid:   { label: "RFID",     icon: "radio" },
+    log:    { label: "Log",      icon: "doc" },
+    script: { label: "Script",   icon: "doc" },
+    config: { label: "Config",   icon: "gear" }
+  };
+
+  function saveVault() { if (LS) saveJSON("axiom.vault", state.captures); }
+
+  // sustained radio activity occasionally lands a fresh capture (throttled to 12 s)
+  function maybeAutoCapture(f) {
+    if (Date.now() - state._lastCap < 12000) return;
+    var hot = null, r = f.radios;
+    if (r.subghz.on && r.subghz.act > 88) hot = { type: "subghz", note: "Sub-GHz burst · " + r.subghz.band, freq: r.subghz.band, rssi: f.radios.wifi.rssi, size_kb: 8 + Math.round(Math.random() * 20), tags: ["sub-ghz", "auto"] };
+    else if (r.nfc.on && r.nfc.act > 92) hot = { type: "nfc", note: "NFC tag read", size_kb: 0.9, tags: ["nfc", "auto"] };
+    else if (r.rfid.on && r.rfid.act > 92) hot = { type: "rfid", note: "RFID tag · 125 kHz", size_kb: 0.1, tags: ["rfid", "auto"] };
+    if (!hot) return;
+    state._lastCap = Date.now();
+    addCapture(hot, f);
+  }
+
+  function addCapture(c, f) {
+    c.id = "cap_" + Math.random().toString(16).slice(2, 6);
+    c.ts = Date.now();
+    c.version = 1;
+    c.geo = (f && f.motion.gnss && f.motion.gnss.fix) ? { lat: f.motion.gnss.lat, lon: f.motion.gnss.lon } : null;
+    state.captures.unshift(c);
+    if (state.captures.length > 200) state.captures.pop();
+    saveVault();
+    if (state.view === "vault") renderVaultList();
+    else toast("Capture saved to vault · " + (CAP_META[c.type] || {}).label, "ok");
+  }
+
+  function allTags() {
+    var seen = {};
+    state.captures.forEach(function (c) { (c.tags || []).forEach(function (t) { seen[t] = (seen[t] || 0) + 1; }); });
+    return Object.keys(seen).sort(function (a, b) { return seen[b] - seen[a]; });
+  }
+
+  function filteredCaptures() {
+    var q = state.vaultQuery.trim().toLowerCase(), tag = state.vaultTag;
+    return state.captures.filter(function (c) {
+      if (tag && (c.tags || []).indexOf(tag) === -1) return false;
+      if (!q) return true;
+      var hay = [c.note, c.type, (CAP_META[c.type] || {}).label, c.freq, (c.tags || []).join(" ")].join(" ").toLowerCase();
+      return hay.indexOf(q) !== -1;
+    });
+  }
+
+  function renderVault() {
+    var main = $("#main");
+    main.innerHTML =
+      topbar("Capture Vault", "Local-first · searchable · versioned — works with no account") +
+      '<div class="vault-bar">' +
+        '<div class="vault-search">' + I.search + '<input id="vq" placeholder="Search captures, tags, frequencies…" value="' + esc(state.vaultQuery) + '" /></div>' +
+        '<button class="btn btn-ghost btn-sm" id="capNow">' + I.vault + ' Simulate capture</button>' +
+      '</div>' +
+      '<div class="vault-tags" id="vaultTags"></div>' +
+      '<div id="vaultList"></div>';
+    $("#vq").oninput = function () { state.vaultQuery = this.value; renderVaultList(); };
+    $("#capNow").onclick = function () {
+      addCapture({ type: "subghz", note: "Manual capture · 433.92 MHz", freq: "433.92 MHz", rssi: -61, size_kb: 10 + Math.round(Math.random() * 18), tags: ["sub-ghz", "manual"] }, state.frame);
+    };
+    renderVaultTags();
+    renderVaultList();
+  }
+
+  function renderVaultTags() {
+    var el = $("#vaultTags"); if (!el) return;
+    var tags = allTags();
+    el.innerHTML =
+      '<button class="vtag' + (state.vaultTag ? "" : " on") + '" data-tag="">All</button>' +
+      tags.map(function (t) { return '<button class="vtag' + (state.vaultTag === t ? " on" : "") + '" data-tag="' + esc(t) + '">' + esc(t) + '</button>'; }).join("");
+    Array.prototype.forEach.call(el.querySelectorAll(".vtag"), function (b) {
+      b.onclick = function () {
+        var t = b.getAttribute("data-tag");
+        state.vaultTag = t || null;
+        renderVaultTags(); renderVaultList();
+      };
+    });
+  }
+
+  function renderVaultList() {
+    var el = $("#vaultList"); if (!el) return;
+    var items = filteredCaptures();
+    if (!items.length) {
+      el.innerHTML = '<div class="vault-empty">' + I.vault +
+        '<div class="t">' + (state.captures.length ? "No captures match your search" : "Your vault is empty") + '</div>' +
+        '<div class="s">' + (state.captures.length ? "Try a different term or clear the tag filter." :
+          "Captures appear here the moment your AXIOM records RF, NFC, or RFID — or simulate one above.") + '</div></div>';
+      return;
+    }
+    el.innerHTML = '<div class="vault-list">' + items.map(captureRow).join("") + '</div>';
+    Array.prototype.forEach.call(el.querySelectorAll(".cap-row"), function (row) {
+      row.querySelector(".cap-main").onclick = function () { row.classList.toggle("open"); };
+      var del = row.querySelector(".cap-del");
+      if (del) del.onclick = function (e) {
+        e.stopPropagation();
+        state.captures = state.captures.filter(function (c) { return c.id !== row.getAttribute("data-id"); });
+        saveVault(); renderVaultTags(); renderVaultList();
+      };
+    });
+  }
+
+  function captureRow(c) {
+    var m = CAP_META[c.type] || { label: c.type, icon: "doc" };
+    var size = c.size_kb >= 1024 ? (c.size_kb / 1024).toFixed(1) + " MB" : (c.size_kb < 1 ? (c.size_kb * 1000).toFixed(0) + " B" : c.size_kb + " KB");
+    return '<div class="cap-row" data-id="' + c.id + '">' +
+      '<div class="cap-main">' +
+        '<div class="cap-ic cap-' + c.type + '">' + I[m.icon] + '</div>' +
+        '<div class="cap-meta"><div class="n">' + esc(c.note) + '</div>' +
+          '<div class="s"><span class="cap-type">' + m.label + '</span> · ' + size + ' · ' + relTime(c.ts) +
+          (c.version > 1 ? ' · v' + c.version : '') + (c.geo ? ' · 📍' : '') + '</div></div>' +
+        '<div class="cap-tags">' + (c.tags || []).slice(0, 2).map(function (t) { return '<span class="cap-tag">' + esc(t) + '</span>'; }).join("") + '</div>' +
+      '</div>' +
+      '<div class="cap-detail">' +
+        kv("Type", m.label) + (c.freq ? kv("Frequency", c.freq) : "") + (c.rssi ? kv("RSSI", c.rssi + " dBm") : "") +
+        kv("Size", size) + kv("Captured", fmtTime(c.ts)) + kv("Version", "v" + c.version) +
+        (c.geo ? kv("Location", c.geo.lat.toFixed(4) + ", " + c.geo.lon.toFixed(4)) : kv("Location", "not geotagged")) +
+        kv("Tags", (c.tags || []).join(", ") || "—") +
+        '<div class="cap-actions"><button class="btn btn-ghost btn-sm cap-del" style="color:#E0857E;border-color:rgba(224,133,126,.4)">Delete</button></div>' +
+      '</div></div>';
+  }
+  function kv(k, v) { return '<div class="cap-kv"><span class="k">' + k + '</span><span class="v">' + esc(v) + '</span></div>'; }
+
+  function relTime(ts) {
+    var s = Math.max(1, Math.round((Date.now() - ts) / 1000));
+    if (s < 60) return s + "s ago";
+    if (s < 3600) return Math.round(s / 60) + "m ago";
+    if (s < 86400) return Math.round(s / 3600) + "h ago";
+    return Math.round(s / 86400) + "d ago";
   }
 
   // ============================================================ FIRMWARE (AX-110)
