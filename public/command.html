@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AXIOM Command — See everything. Cast anything. Lose nothing.</title>
+<meta name="description" content="The command center for the AXIOM pocket computer: live telemetry, cast maps and content to the 4K screen, and a searchable, local-first capture vault." />
+<meta property="og:title" content="AXIOM Command — the companion app for AXIOM" />
+<meta property="og:description" content="See everything your AXIOM is doing, push anything to its 4K screen, and keep every capture safe. Local-first, no account needed." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="./assets/device.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --purple-900:#4A3878;--purple-800:#5C4A8E;--purple-700:#7660A8;--purple-500:#9384BD;--purple-300:#C9C0DE;--purple-100:#F1EEF8;
+    --bg:#0E0D12;--panel:#17151E;--panel-2:#1E1B27;--line:#2A2733;--line-2:#37323F;
+    --fg:#F4F2F8;--fg-1:#C7C2D2;--fg-2:#8E889C;--brand:#9384BD;--brand-strong:#7660A8;
+    --radius:18px;--pill:999px;--ease:cubic-bezier(.22,1,.36,1);
+    --font:'Poppins',system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font);background:var(--bg);color:var(--fg);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;padding:13px 26px;border-radius:var(--pill);
+    border:1px solid transparent;transition:all .18s var(--ease);cursor:pointer;}
+  .btn-primary{background:var(--brand-strong);color:#fff;box-shadow:0 8px 28px rgba(118,96,168,.4);}
+  .btn-primary:hover{background:var(--purple-800);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:var(--fg-1);border-color:var(--line-2);}
+  .btn-ghost:hover{border-color:var(--brand);color:#fff;}
+  .eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:600;color:var(--brand);}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(14,13,18,.78);border-bottom:1px solid var(--line);}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:17px;}
+  .brand svg{width:30px;height:30px;}
+  .nav-links{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:500;color:var(--fg-1);}
+  .nav-links a:hover{color:#fff;}
+  .nav-links .btn{padding:9px 20px;font-size:14px;}
+  @media(max-width:760px){.nav-links a:not(.btn){display:none;}}
+
+  /* hero */
+  #hero{position:relative;padding:92px 0 80px;overflow:hidden;}
+  #hero::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(720px 420px at 78% -8%,rgba(118,96,168,.34),transparent 60%),
+    radial-gradient(560px 360px at 4% 8%,rgba(91,74,142,.22),transparent 55%);pointer-events:none;}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;}
+  #hero h1{font-size:clamp(34px,5.4vw,58px);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin:16px 0 18px;}
+  #hero h1 .accent{background:linear-gradient(100deg,var(--purple-300),var(--brand-strong));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  #hero p.lede{font-size:18px;color:var(--fg-1);max-width:540px;}
+  .benefits{list-style:none;margin:26px 0 30px;display:flex;flex-direction:column;gap:13px;}
+  .benefits li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--fg-1);}
+  .benefits .tick{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:rgba(118,96,168,.18);display:flex;align-items:center;justify-content:center;color:var(--brand);margin-top:1px;}
+  .benefits .tick svg{width:13px;height:13px;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .trust{margin-top:20px;font-size:13px;color:var(--fg-2);display:flex;align-items:center;gap:8px;}
+  .trust .d{width:7px;height:7px;border-radius:50%;background:#7FE0B0;box-shadow:0 0 10px #7FE0B0;}
+  .device-card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--line-2);border-radius:24px;
+    padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.5);}
+  .device-card img{width:100%;border-radius:14px;display:block;}
+  .device-stat{display:flex;justify-content:space-between;margin-top:18px;gap:10px;}
+  .device-stat div{flex:1;background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:11px 13px;}
+  .device-stat .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--fg-2);}
+  .device-stat .v{font-size:17px;font-weight:700;margin-top:3px;}
+  @media(max-width:880px){.hero-grid{grid-template-columns:1fr;}.device-card{max-width:420px;}}
+
+  /* sections */
+  section{padding:78px 0;}
+  .sec-head{max-width:620px;margin-bottom:46px;}
+  .sec-head h2{font-size:clamp(27px,3.6vw,40px);font-weight:700;letter-spacing:-.01em;margin:12px 0 12px;}
+  .sec-head p{color:var(--fg-1);font-size:16px;}
+
+  .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .feature{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:border-color .18s,transform .18s;}
+  .feature:hover{border-color:var(--line-2);transform:translateY(-2px);}
+  .feature .ic{width:46px;height:46px;border-radius:13px;background:rgba(118,96,168,.15);color:var(--brand);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+  .feature .ic svg{width:23px;height:23px;}
+  .feature h3{font-size:18px;font-weight:700;margin-bottom:8px;}
+  .feature p{color:var(--fg-1);font-size:14.5px;}
+  .feature .tag{display:inline-block;margin-top:14px;font-size:11px;font-weight:600;color:var(--brand);background:rgba(118,96,168,.12);padding:4px 11px;border-radius:99px;}
+  @media(max-width:860px){.features{grid-template-columns:1fr;}}
+
+  /* how */
+  #how{background:linear-gradient(180deg,transparent,rgba(118,96,168,.05),transparent);}
+  .radios{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .radio{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
+  .radio .badge{font-size:12px;font-weight:700;color:#fff;background:var(--brand-strong);padding:5px 12px;border-radius:99px;display:inline-block;margin-bottom:14px;}
+  .radio h3{font-size:16px;margin-bottom:6px;}
+  .radio p{color:var(--fg-2);font-size:14px;}
+  @media(max-width:860px){.radios{grid-template-columns:1fr;}}
+
+  /* faq */
+  .faq{max-width:760px;margin:0 auto;}
+  details{background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;}
+  details[open]{border-color:var(--line-2);}
+  summary{padding:18px 22px;font-weight:600;font-size:16px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";color:var(--brand);font-size:22px;font-weight:400;transition:transform .2s;}
+  details[open] summary::after{transform:rotate(45deg);}
+  details .body{padding:0 22px 20px;color:var(--fg-1);font-size:15px;}
+
+  /* cta */
+  #cta .box{background:linear-gradient(120deg,var(--purple-900),var(--brand-strong));border-radius:24px;padding:56px 40px;text-align:center;
+    box-shadow:0 30px 80px rgba(74,56,120,.45);}
+  #cta h2{font-size:clamp(26px,3.6vw,38px);font-weight:800;margin-bottom:14px;}
+  #cta p{color:var(--purple-100);max-width:520px;margin:0 auto 28px;font-size:16px;}
+  #cta .hero-cta{justify-content:center;}
+  #cta .btn-ghost{border-color:rgba(255,255,255,.45);color:#fff;}
+  #cta .btn-ghost:hover{background:rgba(255,255,255,.12);}
+
+  footer{border-top:1px solid var(--line);padding:46px 0 56px;}
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start;}
+  footer .brand{margin-bottom:10px;}
+  footer .tag{color:var(--fg-2);font-size:14px;max-width:320px;}
+  footer .legal{color:var(--fg-2);font-size:12.5px;max-width:440px;line-height:1.7;}
+  footer a.flink{color:var(--fg-1);font-size:14px;display:block;margin-bottom:8px;}
+  footer a.flink:hover{color:#fff;}
+</style>
+</head>
+<body>
+
+<!-- AXIOM logo cube reused across nav + footer -->
+<nav>
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 120 120"><path d="M60 14 106 38v6L60 20Z" fill="#9384BD"/><path d="M60 20v44L14 40Z" fill="#7660A8"/><path d="M60 26 100 48 60 70 20 48Z" fill="#7660A8"/><path d="M60 26 100 48 60 70Z" fill="#9384BD"/><path d="M20 60 60 82 100 60 60 38Z" fill="#D6D6D6"/></svg>
+      AXIOM Command
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how">Connection</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary" href="/app">Open the app</a>
+    </div>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">The companion app for AXIOM</span>
+      <h1>See everything.<br><span class="accent">Cast anything.</span><br>Lose nothing.</h1>
+      <p class="lede">AXIOM Command is the command center for your pocket computer — live telemetry for every radio, your 4K screen finally put to work, and a searchable vault for every capture.</p>
+      <ul class="benefits">
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Sub-second power, thermal, compute &amp; radio telemetry — even in your pocket.</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Cast offline maps, dashboards, docs &amp; notifications to the 5.9″ AMOLED screen.</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Local-first capture vault — search, tag &amp; version, no account required.</li>
+      </ul>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/app">Open AXIOM Command →</a>
+        <a class="btn btn-ghost" href="/">Back the device</a>
+      </div>
+      <div class="trust"><span class="d"></span> Alpha runs in your browser against a device simulator — try it now, no hardware needed.</div>
+    </div>
+    <div class="device-card">
+      <img src="./assets/device.png" alt="AXIOM pocket computer" onerror="this.style.display='none'" />
+      <div class="device-stat">
+        <div><div class="k">Battery</div><div class="v">78%</div></div>
+        <div><div class="k">SoC</div><div class="v">41°C</div></div>
+        <div><div class="k">Link</div><div class="v">Wi-Fi 6E</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">What it does</span>
+      <h2>One pane of glass for an open hardware platform</h2>
+      <p>Everything core works over a direct link with no account. Cloud, AI, and fleet add to it — they never gate basic control.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 18 2-9 1 3h5"/></svg></div>
+        <h3>Live telemetry</h3>
+        <p>Power, thermals, compute, storage, and every radio — streaming with sub-second latency. One status line says it's nominal; one tap shows you why.</p>
+        <span class="tag">Health</span>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16a6 6 0 0 1 6 6M2 12a10 10 0 0 1 10 10M2 8a14 14 0 0 1 14 14"/><rect x="2" y="3" width="20" height="14" rx="2"/></svg></div>
+        <h3>Cast to the 4K screen</h3>
+        <p>Push an offline map and route, a live field dashboard, a notification, or a document to the AMOLED panel in three taps — auto-upgrading to Wi-Fi 6E.</p>
+        <span class="tag">Cast</span>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4v6c0 5-3.5 8-9 9-5.5-1-9-4-9-9Z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Capture vault</h3>
+        <p>Sub-GHz, NFC, RFID, logs, and scripts land in a local-first vault you can search, tag, and version. It backs up automatically — captures are never trapped on-device.</p>
+        <span class="tag">Vault</span>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg></div>
+        <h3>Updates that can't brick</h3>
+        <p>OTA firmware with A/B partitions and automatic rollback. A power loss mid-update simply boots the old slot — your device survives every time.</p>
+        <span class="tag">Firmware</span>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm1.5-3.5L17 7M4 18a9 9 0 1 1 16 0"/></svg></div>
+        <h3>Configurable alerts</h3>
+        <p>Low battery, overheating, storage nearly full, unexpected radio activity, device offline — set the thresholds and AXIOM Command tells you before it's a problem.</p>
+        <span class="tag">Alerts</span>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M5 12a7 7 0 0 1 14 0M2 12a10 10 0 0 1 20 0"/></svg></div>
+        <h3>Three radios, one session</h3>
+        <p>Bluetooth for presence and control, Wi-Fi 6E for casting and sync, USB-C for setup — a single connection that hands off automatically as your needs change.</p>
+        <span class="tag">Transport</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">How it connects</span>
+      <h2>Always the right link for the job</h2>
+      <p>AXIOM Command picks the best transport and switches seamlessly — low-power when you're just monitoring, high-bandwidth the moment you cast.</p>
+    </div>
+    <div class="radios">
+      <div class="radio"><span class="badge">Bluetooth LE 5.3</span><h3>Presence &amp; control</h3><p>Always-on, low-power channel for telemetry, notifications, and find-my — the primary link while the device is in your pocket.</p></div>
+      <div class="radio"><span class="badge">Wi-Fi 6E</span><h3>Casting &amp; sync</h3><p>High-bandwidth channel that auto-engages for screen casting, capture sync, and live mirroring at the lowest latency.</p></div>
+      <div class="radio"><span class="badge">USB-C</span><h3>Setup &amp; bulk</h3><p>Fastest, wired fallback for first-pair, firmware recovery, and bulk transfer — no radios required.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head" style="text-align:center;margin:0 auto 46px;">
+      <span class="eyebrow">Questions</span>
+      <h2>The short answers</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>Do I need an account?</summary><div class="body">No. Pairing, telemetry, the local vault, casting, and OTA updates all work over a direct link with no account. Cloud sync and the AI copilot are opt-in additions later.</div></details>
+      <details><summary>Is my data private?</summary><div class="body">Local-first by default — nothing leaves your device without explicit opt-in. Cloud sync, when it ships, is end-to-end encrypted with keys held in your device's secure enclave.</div></details>
+      <details><summary>Is this for hacking?</summary><div class="body">No. Every radio and capture feature is built for makers, educators, and authorized security research on systems and spectrum you own or are permitted to use — with region-aware compliance and explicit authorization gates.</div></details>
+      <details><summary>Can I try it now?</summary><div class="body">Yes. The Alpha web client runs against a built-in device simulator, so you can explore Health, Cast, the Vault, and OTA right in your browser before the hardware ships.</div></details>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="wrap">
+    <div class="box">
+      <h2>Your AXIOM is the body.<br>Command is the nervous system.</h2>
+      <p>Open the Alpha web client and drive a simulated AXIOM — pair it, watch it live, cast to its screen, and fill the vault.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" style="background:#fff;color:var(--purple-900);box-shadow:0 8px 28px rgba(0,0,0,.3)" href="/app">Open AXIOM Command →</a>
+        <a class="btn btn-ghost" href="/">Back the device</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand">
+        <svg viewBox="0 0 120 120"><path d="M60 14 106 38v6L60 20Z" fill="#9384BD"/><path d="M60 20v44L14 40Z" fill="#7660A8"/><path d="M60 26 100 48 60 70 20 48Z" fill="#7660A8"/><path d="M60 26 100 48 60 70Z" fill="#9384BD"/><path d="M20 60 60 82 100 60 60 38Z" fill="#D6D6D6"/></svg>
+        AXIOM Command
+      </div>
+      <p class="tag">See everything. Cast anything. Lose nothing.</p>
+    </div>
+    <div>
+      <a class="flink" href="/app">Open the app</a>
+      <a class="flink" href="/">Device campaign</a>
+      <a class="flink" href="#features">Features</a>
+      <a class="flink" href="#faq">FAQ</a>
+    </div>
+    <div>
+      <p class="legal">Concept campaign. AXIOM's wireless features are intended for makers, educators, and security researchers to use only on systems they own or are authorized to test, in compliance with local laws and radio regulations. © 2026 AXIOM.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

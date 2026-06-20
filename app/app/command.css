@@ -200,6 +200,50 @@ a{color:inherit;text-decoration:none;}
 .cast-foot{display:flex;align-items:flex-end;gap:12px;margin-top:16px;}
 .cast-foot .btn{white-space:nowrap;}
 
+/* ---------- Capture Vault (AX-106) ---------- */
+.vault-bar{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.vault-search{flex:1;display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line-2);
+  border-radius:var(--radius-pill);padding:0 16px;transition:border-color .15s;}
+.vault-search:focus-within{border-color:var(--brand);}
+.vault-search svg{width:17px;height:17px;color:var(--fg-2);flex-shrink:0;}
+.vault-search input{flex:1;background:transparent;border:none;outline:none;color:var(--fg);font-family:inherit;font-size:14px;padding:12px 0;}
+.vault-search input::placeholder{color:var(--fg-2);}
+.vault-bar .btn{white-space:nowrap;}
+.vault-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.vtag{background:var(--panel-2);border:1px solid var(--line);color:var(--fg-1);font-family:inherit;font-size:12px;font-weight:600;
+  padding:6px 13px;border-radius:var(--radius-pill);transition:all .15s;text-transform:lowercase;}
+.vtag:hover{color:#fff;border-color:var(--brand);}
+.vtag.on{background:var(--brand-strong);color:#fff;border-color:var(--brand-strong);}
+.vault-list{display:flex;flex-direction:column;gap:10px;}
+.cap-row{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;transition:border-color .15s;}
+.cap-row:hover{border-color:var(--line-2);}
+.cap-row.open{border-color:var(--brand);}
+.cap-main{display:flex;align-items:center;gap:14px;padding:14px 16px;cursor:pointer;}
+.cap-ic{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  background:rgba(118,96,168,.14);color:var(--brand);}
+.cap-ic svg{width:18px;height:18px;}
+.cap-ic.cap-nfc{background:rgba(91,208,138,.14);color:#7FE0B0;}
+.cap-ic.cap-rfid{background:rgba(224,178,90,.14);color:#E0B25A;}
+.cap-ic.cap-log,.cap-ic.cap-script,.cap-ic.cap-config{background:rgba(167,160,180,.12);color:var(--fg-1);}
+.cap-meta{flex:1;min-width:0;}
+.cap-meta .n{color:#fff;font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.cap-meta .s{color:var(--fg-2);font-size:12px;margin-top:3px;}
+.cap-type{color:var(--brand);font-weight:600;}
+.cap-tags{display:flex;gap:6px;flex-shrink:0;}
+.cap-tag{font-size:10.5px;font-weight:600;color:var(--fg-1);background:var(--panel-2);border:1px solid var(--line);
+  border-radius:99px;padding:3px 9px;text-transform:lowercase;}
+.cap-detail{display:none;padding:4px 16px 16px;border-top:1px solid var(--line);}
+.cap-row.open .cap-detail{display:block;animation:fade .25s var(--ease);}
+.cap-kv{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);}
+.cap-kv:last-of-type{border-bottom:none;}
+.cap-kv .k{font-size:12.5px;color:var(--fg-2);}
+.cap-kv .v{font-size:13px;color:#fff;font-weight:500;font-family:var(--mono);text-align:right;}
+.cap-actions{margin-top:14px;}
+.vault-empty{text-align:center;padding:60px 20px;color:var(--fg-2);}
+.vault-empty svg{width:42px;height:42px;color:var(--line-2);margin-bottom:14px;}
+.vault-empty .t{color:var(--fg-1);font-weight:600;font-size:15px;margin-bottom:6px;}
+.vault-empty .s{font-size:13px;max-width:340px;margin:0 auto;line-height:1.6;}
+
 /* ---------- Toasts ---------- */
 .toast-box{position:fixed;right:18px;bottom:18px;z-index:90;display:flex;flex-direction:column;gap:10px;align-items:flex-end;}
 .toast{display:inline-flex;align-items:center;gap:9px;background:var(--panel);border:1px solid var(--line-2);border-left:3px solid var(--brand);
